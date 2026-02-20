@@ -1,12 +1,13 @@
-const DATA_PATH = "/data/abdc.json";
-// 註解用途：build 時檔案位於 public/data/abdc.json，runtime 以 /data/abdc.json 存取
+// public/app.js
+
+const DATA_PATH = "/data/abdc.json"; // public/data/abdc.json 會以 /data/abdc.json 提供
 const RUNTIME_SOURCE = "public/data/abdc.json";
 
 const input = document.getElementById("journal-input");
 const result = document.getElementById("result");
 const status = document.getElementById("loaded-count");
 
-// 這兩個元素在 main 分支的 index.html 可能不存在，所以用可選處理
+// 下面這些在你的 index.html 可能沒有，所以要容錯
 const source = document.getElementById("data-source");
 const fields = document.getElementById("field-info");
 
@@ -14,25 +15,24 @@ let journals = [];
 let journalIndex = new Map();
 
 function normalize(text) {
-  // 目標：大小寫不敏感、忽略標點與空白、& 與 and 等價
-  return (text || "")
+  // 大小寫不敏感、忽略標點/空白、& 視為 and、忽略開頭 the
+  return String(text || "")
     .toLowerCase()
-    .trim()
     .replace(/&/g, " and ")
+    .replace(/^\s*the\s+/i, "")
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
-    .replace(/\band\b/g, "and")
-    .replace(/\s+/g, "")
-    .trim();
+    .trim()
+    .replace(/\s+/g, "");
 }
 
 function getTitle(item) {
-  return (item?.name || item?.title || "").trim();
+  return String(item?.title || item?.name || "").trim();
 }
 
 function getRating(item) {
   const v = item?.rating ?? item?.rank ?? "N/A";
-  return String(v).trim();
+  return String(v).trim() || "N/A";
 }
 
 function levenshtein(a, b) {
@@ -42,14 +42,28 @@ function levenshtein(a, b) {
   for (let i = 1; i <= a.length; i += 1) {
     for (let j = 1; j <= b.length; j += 1) {
       const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      matrix[i][j] = Math.min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
     }
   }
   return matrix[a.length][b.length];
 }
 
+function buildLookupIndex(items) {
+  const index = new Map();
+  for (const item of items) {
+    const key = normalize(getTitle(item));
+    if (key && !index.has(key)) index.set(key, item);
+  }
+  return index;
+}
+
 function findSuggestions(query, count = 5) {
   const normalizedQuery = normalize(query);
+  if (!normalizedQuery) return [];
 
   return journals
     .map((item) => {
@@ -60,11 +74,11 @@ function findSuggestions(query, count = 5) {
 
       return {
         ...item,
-        title,
-        score: distance + startsWithBonus
+        _title: title,
+        _score: distance + startsWithBonus,
       };
     })
-    .sort((a, b) => a.score - b.score)
+    .sort((a, b) => a._score - b._score)
     .slice(0, count);
 }
 
@@ -80,7 +94,7 @@ function renderFound(journal) {
 function renderNotFound(query) {
   const suggestions = findSuggestions(query);
   const suggestionItems = suggestions
-    .map((item) => `<li>${item.title} <span class="rank">(${getRating(item)})</span></li>`)
+    .map((item) => `<li>${getTitle(item)} <span class="rank">(${getRating(item)})</span></li>`)
     .join("");
 
   result.className = "result-card not-found";
@@ -97,31 +111,18 @@ function renderEmpty() {
   result.innerHTML = "<h2>Type a journal name to begin.</h2>";
 }
 
-function buildLookupIndex(items) {
-  const index = new Map();
-  for (const item of items) {
-    const key = normalize(getTitle(item));
-    if (key && !index.has(key)) index.set(key, item);
-  }
-  return index;
-}
-
 function search() {
-  const query = input.value;
+  const query = input.value || "";
   if (!query.trim()) {
     renderEmpty();
     return;
   }
 
-  const normalizedQuery = normalize(query);
-  const match = journalIndex.get(normalizedQuery);
+  const key = normalize(query);
+  const match = journalIndex.get(key);
 
-  if (match) {
-    renderFound(match);
-    return;
-  }
-
-  renderNotFound(query.trim());
+  if (match) renderFound(match);
+  else renderNotFound(query.trim());
 }
 
 async function loadJournals() {
@@ -134,7 +135,7 @@ async function loadJournals() {
   if (source) source.textContent = `Runtime data source: ${DATA_PATH} (served from ${RUNTIME_SOURCE})`;
   if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
 
-  status.textContent = `Loaded ${journals.length} journals`;
+  if (status) status.textContent = `Loaded ${journals.length} journals`;
   renderEmpty();
 }
 
@@ -150,7 +151,7 @@ loadJournals().catch(() => {
   if (source) source.textContent = `Runtime data source: ${DATA_PATH}`;
   if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
 
-  status.textContent = "Could not load journal data";
+  if (status) status.textContent = "Could not load journal data";
   result.className = "result-card not-found";
   result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
 });
