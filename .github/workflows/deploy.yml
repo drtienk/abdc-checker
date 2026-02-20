@@ -1,7 +1,7 @@
 name: Deploy Vite to GitHub Pages
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -22,12 +22,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+           
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: npm install
+      - run: npm ci
       - run: npm run build
 
       - uses: actions/configure-pages@v5
