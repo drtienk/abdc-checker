@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  width: min(760px, 100%);
+  width: min(820px, 100%);
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
@@ -35,8 +35,17 @@ header p {
   color: #475569;
 }
 
+/* 支援兩種 header 狀態顯示：舊版 loaded-note / 新版 loaded-count + data-source */
+.loaded-note {
+  font-size: 0.95rem;
+  color: #0f766e;
+  margin-top: 0.35rem;
+}
+
 .data-source {
   font-size: 0.92rem;
+  margin-top: 0.35rem;
+  color: #475569;
 }
 
 .loaded-count {
@@ -54,12 +63,37 @@ label {
   margin-bottom: 0.5rem;
 }
 
+/* 若你的 HTML 有 input+button 同列，這個會生效；沒有也不影響 */
+.search-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 input {
   width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 0.75rem 0.95rem;
   font-size: 1rem;
+}
+
+.search-row input {
+  flex: 1;
+}
+
+button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
 }
 
 .result-card {
@@ -94,11 +128,17 @@ input {
   border-color: #fdba74;
 }
 
+.error {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
 .rank {
   color: #334155;
   font-size: 0.95rem;
 }
 
+/* optional debug styling (新分支有用到就會套用) */
 .debug-block {
   margin-top: 0.75rem;
 }
@@ -109,7 +149,7 @@ code {
   border-radius: 4px;
 }
 
-
+/* Scholar Search block */
 .scholar-panel {
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -136,6 +176,10 @@ code {
   cursor: pointer;
 }
 
+.scholar-panel button:hover {
+  background: #0b1220;
+}
+
 .scholar-panel button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -146,4 +190,11 @@ code {
   margin: 0.5rem 0 0;
   color: #475569;
   font-size: 0.92rem;
+}
+
+.scholar-version {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-left: 0.25rem;
 }

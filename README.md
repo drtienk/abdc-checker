@@ -1,8 +1,8 @@
 # ABDC Journal Checker
 
-A simple website where you type a journal name and check whether it is in the ABDC journal list.
+A simple website where you type a journal name (or title) and check whether it is in the ABDC journal list.
 
-## Features
+## What it does
 
 - Single search box for journal lookup.
 - Loads runtime data from exactly one source: `/data/abdc.json` (served from `public/data/abdc.json`).
@@ -13,7 +13,18 @@ A simple website where you type a journal name and check whether it is in the AB
 - Shows best suggestions when not found.
 - Displays both runtime data path and `Loaded N journals` after data is loaded.
 
-## Project structure
+## Data pipeline
+
+Runtime data file:
+
+- `public/data/abdc.json` (served at runtime as `/data/abdc.json`)
+
+It is generated from:
+
+- `data/abdc.xlsx` (preferred source)
+- `data/abdc.json` (fallback if the Excel file is missing)
+
+## Repo layout
 
 - `index.html` — single-page UI shell.
 - `src/main.js` — data loading, normalization, index lookup, and result rendering.
@@ -24,59 +35,17 @@ A simple website where you type a journal name and check whether it is in the AB
 
 ## Expected runtime JSON schema
 
-`public/data/abdc.json` should be an array like:
+`public/data/abdc.json` should be an array of journal objects. The generator may include these fields:
 
 ```json
 [
-  { "name": "Abacus", "rating": "A" }
+  {
+    "title": "Journal Name",
+    "rating": "A*",
+    "issn": "1234-5678",
+    "issn_online": "1234-5679",
+    "publisher": "Publisher Name",
+    "for_code": "1503",
+    "year": "1984"
+  }
 ]
-```
-
-The app resolves title using `name` then `title`, and rating using `rating` then `rank`.
-
-## Run locally
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Generate data from the spreadsheet:
-
-```bash
-python scripts/generate_abdc_json.py
-```
-
-3. Start dev server:
-
-```bash
-npm run dev
-```
-
-4. Build for production:
-
-```bash
-npm run build
-```
-
-## Regenerating journal data
-
-Whenever `data/abdc.xlsx` changes, run:
-
-```bash
-python scripts/generate_abdc_json.py
-```
-
-## Regression test
-
-Use this input and verify it returns `FOUND` with the official title and rating:
-
-- `Advances in Accounting Behavioral Research`
-
-## Developer note: Scholar Search
-
-- The **Scholar Search** block is independent from the ABDC checker UI and reuses the already-loaded ABDC journal list to populate the journal picker.
-- It builds Google Scholar queries in this format: `allintitle:"<keyword>" "<journal>"`.
-- Searches open in one reusable browser tab/window name (`scholarResults`) so each new search replaces the previous Scholar results.
-- If popups are blocked by the browser, the feature shows a status warning and requires allowing popups for the page.
