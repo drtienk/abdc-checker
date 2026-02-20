@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:data": "python scripts/generate_abdc_json.py",
+    "predev": "npm run generate:data",
     "dev": "vite",
     "prebuild": "npm run generate:data",
     "build": "vite build",

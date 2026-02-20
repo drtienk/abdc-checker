@@ -48,15 +48,19 @@ function levenshtein(a, b) {
   for (let i = 1; i <= a.length; i += 1) {
     for (let j = 1; j <= b.length; j += 1) {
       const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      matrix[i][j] = Math.min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
     }
   }
-
   return matrix[a.length][b.length];
 }
 
 function findSuggestions(query, count = 5) {
   const normalizedQuery = normalize(query);
+  if (!normalizedQuery) return [];
 
   return journals
     .map((item) => {
@@ -72,7 +76,8 @@ function findSuggestions(query, count = 5) {
       };
     })
     .sort((a, b) => a.score - b.score)
-    .slice(0, count);
+    .slice(0, count)
+    .map((x) => x.item);
 }
 
 function renderFound(journal) {
@@ -206,8 +211,39 @@ function search() {
   const normalizedQuery = normalize(query);
   const match = journalIndex.get(normalizedQuery);
 
-  if (match) {
-    renderFound(match);
+function openOrReuseTab(url, name = "scholarResults") {
+  // 用 window.open(url, name) 就能確保同名視窗會被重用
+  const w = window.open(url, name);
+  if (!w) {
+    setScholarStatus("Popup blocked. Please allow popups and try again.");
+    return false;
+  }
+  scholarTab = w;
+  try {
+    w.focus();
+  } catch {
+    // ignore
+  }
+  return true;
+}
+
+function runScholarSearch() {
+  if (!HAS_SCHOLAR_UI) return;
+
+  if (!journals.length) {
+    setScholarStatus("Loading journals...");
+    return;
+  }
+
+  const keyword = scholarKeywordInput.value.trim();
+  const journal = scholarJournalInput.value.trim();
+
+  if (!keyword) {
+    setScholarStatus("Keyword required");
+    return;
+  }
+  if (!journal) {
+    setScholarStatus("Select a journal");
     return;
   }
 

@@ -1,8 +1,8 @@
 # ABDC Journal Checker
 
-A simple website where you type a journal name and check whether it is in the ABDC journal list.
+A simple website where you type a journal name (or title) and check whether it is in the ABDC journal list.
 
-## Features
+## What it does
 
 - Single search box for journal lookup.
 - Loads runtime data from exactly one source: `/data/abdc.json` (served from `public/data/abdc.json`).
@@ -13,7 +13,7 @@ A simple website where you type a journal name and check whether it is in the AB
 - Shows best suggestions when not found.
 - Displays both runtime data path and `Loaded N journals` after data is loaded.
 
-## Project structure
+## Data pipeline
 
 - `index.html` — single-page UI shell.
 - `src/main.js` — data loading, normalization, index lookup, and result rendering.
