@@ -1,7 +1,8 @@
 // src/main.js
 
-const DATA_PATH = new URL("data/abdc.json", import.meta.env.BASE_URL).toString();
+const DATA_PATH = "/data/abdc.json"; // public/data/abdc.json 會以 /data/abdc.json 提供
 const RUNTIME_SOURCE = "public/data/abdc.json";
+
 const input = document.getElementById("journal-input");
 const result = document.getElementById("result");
 const status = document.getElementById("loaded-count");
