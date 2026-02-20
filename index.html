@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABDC Journal Checker</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>ABDC Journal Checker</h1>
+        <p>Search a journal title to check whether it appears in the ABDC journal list.</p>
+        <p id="loaded-note" class="loaded-note">Loaded 0 journals</p>
+      </header>
+
+      <section class="search-panel">
+        <label for="journal-input">Journal title</label>
+        <div class="search-row">
+          <input id="journal-input" type="text" placeholder="e.g., Journal of Marketing" autocomplete="off" />
+          <button id="search-btn" type="button">Check</button>
+        </div>
+      </section>
+
+      <section id="result" class="result-card" aria-live="polite">
+        <h2>Enter a journal title to begin.</h2>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
