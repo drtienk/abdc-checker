@@ -215,7 +215,7 @@ function runScholarSearch() {
 
   persistScholarInputs();
 
-  const q = `allintitle:"${keyword}" "${journal}"`;
+  const q = `allintitle:"${keyword}" ,source:"${journal}"`;
   const url = `https://scholar.google.com/scholar?q=${encodeURIComponent(q)}`;
 
   if (openOrReuseTab(url, "scholarResults")) {
