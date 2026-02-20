@@ -1,11 +1,30 @@
-import journals from "../data/abdc.json";
+const DATA_PATH = "/data/abdc.json";
+const RUNTIME_SOURCE = "public/data/abdc.json";
+const DEBUG_MODE = new URLSearchParams(window.location.search).get("debug") === "1";
 
 const input = document.getElementById("journal-input");
-const button = document.getElementById("search-btn");
 const result = document.getElementById("result");
+const status = document.getElementById("loaded-count");
+const source = document.getElementById("data-source");
+
+let journals = [];
+let journalIndex = new Map();
 
 function normalize(text) {
-  return text.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return (text || "")
+    .replace(/[\u200B-\u200D\uFEFF\u00A0]/g, " ")
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\band\b/g, "and")
+    .replace(/\s+/g, "")
+    .trim();
+}
+
+function getTitle(item) {
+  return (item.title || item.name || "").trim();
 }
 
 function levenshtein(a, b) {
@@ -22,17 +41,20 @@ function levenshtein(a, b) {
   return matrix[a.length][b.length];
 }
 
-function findSuggestions(query, list, count = 5) {
+function findSuggestions(query, count = 5) {
   const normalizedQuery = normalize(query);
 
-  return list
+  return journals
     .map((item) => {
-      const normalizedName = normalize(item.name);
-      const distance = levenshtein(normalizedQuery, normalizedName);
-      const startsWithBonus = normalizedName.startsWith(normalizedQuery) ? -2 : 0;
+      const title = getTitle(item);
+      const normalizedTitle = normalize(title);
+      const distance = levenshtein(normalizedQuery, normalizedTitle);
+      const startsWithBonus = normalizedTitle.startsWith(normalizedQuery) ? -2 : 0;
 
       return {
         ...item,
+        title,
+        normalizedTitle,
         score: distance + startsWithBonus
       };
     })
@@ -43,52 +65,97 @@ function findSuggestions(query, list, count = 5) {
 function renderFound(journal) {
   result.className = "result-card found";
   result.innerHTML = `
-    <h2>Found in ABDC list</h2>
-    <p><strong>${journal.name}</strong></p>
-    <p>ABDC rank: <strong>${journal.rank}</strong></p>
+    <h2>FOUND</h2>
+    <p><strong>${getTitle(journal)}</strong></p>
+    <p>Rating: <strong>${journal.rating || "N/A"}</strong></p>
   `;
 }
 
 function renderNotFound(query) {
-  const suggestions = findSuggestions(query, journals);
+  const normalizedQuery = normalize(query);
+  const suggestions = findSuggestions(query);
   const suggestionItems = suggestions
-    .map((item) => `<li>${item.name} <span class="rank">(${item.rank})</span></li>`)
+    .map((item) => `<li>${item.title} <span class="rank">(${item.rating || "N/A"})</span></li>`)
     .join("");
+
+  let debugBlock = "";
+  if (DEBUG_MODE) {
+    const closestNormalized = suggestions.map((item) => item.normalizedTitle).join(", ");
+    console.debug("[ABDC DEBUG] not found", { normalizedQuery, closestNormalized, suggestions });
+    debugBlock = `
+      <details class="debug-block" open>
+        <summary>Debug details</summary>
+        <p><strong>Normalized query:</strong> <code>${normalizedQuery}</code></p>
+        <p><strong>Closest normalized candidates:</strong> <code>${closestNormalized || "(none)"}</code></p>
+      </details>
+    `;
+  }
 
   result.className = "result-card not-found";
   result.innerHTML = `
-    <h2>Not found in ABDC list</h2>
+    <h2>NOT FOUND</h2>
     <p><strong>${query}</strong> is not an exact match.</p>
-    <p class="suggestion-title">Similar journals:</p>
+    <p class="suggestion-title">Suggestions:</p>
     <ul>${suggestionItems}</ul>
+    ${debugBlock}
   `;
 }
 
 function renderEmpty() {
-  result.className = "result-card not-found";
-  result.innerHTML = "<h2>Please enter a journal name.</h2>";
+  result.className = "result-card";
+  result.innerHTML = "<h2>Type a journal name to begin.</h2>";
+}
+
+function buildLookupIndex(items) {
+  const index = new Map();
+  for (const item of items) {
+    const key = normalize(getTitle(item));
+    if (key && !index.has(key)) {
+      index.set(key, item);
+    }
+  }
+  return index;
 }
 
 function search() {
-  const query = input.value.trim();
-
-  if (!query) {
+  const query = input.value;
+  if (!query.trim()) {
     renderEmpty();
     return;
   }
 
   const normalizedQuery = normalize(query);
-  const match = journals.find((item) => normalize(item.name) === normalizedQuery);
+  const match = journalIndex.get(normalizedQuery);
 
   if (match) {
     renderFound(match);
     return;
   }
 
-  renderNotFound(query);
+  renderNotFound(query.trim());
 }
 
-button.addEventListener("click", search);
+async function loadJournals() {
+  const response = await fetch(DATA_PATH);
+  journals = await response.json();
+  journalIndex = buildLookupIndex(journals);
+
+  source.textContent = `Runtime data source: ${DATA_PATH} (served from ${RUNTIME_SOURCE})`;
+  status.textContent = `Loaded ${journals.length} journals`;
+  renderEmpty();
+}
+
+input.addEventListener("input", search);
 input.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") search();
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
+});
+
+loadJournals().catch(() => {
+  source.textContent = `Runtime data source: ${DATA_PATH}`;
+  status.textContent = "Could not load journal data";
+  result.className = "result-card not-found";
+  result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
 });
