@@ -1,209 +1,3413 @@
 [
   {
-    "title": "Accounting and Finance",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+
+ 
+    "name": "Abacus",
+    "rating": "A"
   },
   {
-    "title": "Academy of Management Journal",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Annals",
+    "rating": "A*"
   },
   {
-    "title": "Academy of Management Review",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Discoveries",
+    "rating": "A"
   },
   {
-    "title": "Administrative Science Quarterly",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Journal",
+    "rating": "A*"
   },
   {
-    "title": "Decision Support Systems",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Learning and Education",
+    "rating": "A*"
   },
   {
-    "title": "European Journal of Operational Research",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Perspectives",
+    "rating": "A"
   },
   {
-    "title": "Harvard Business Review",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Academy of Management Review",
+    "rating": "A*"
   },
   {
-    "title": "Human Resource Management",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accident Analysis and Prevention",
+    "rating": "A*"
   },
   {
-    "title": "Information Systems Research",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting and Business Research",
+    "rating": "A"
   },
   {
-    "title": "Journal of Accounting Research",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting and Finance",
+    "rating": "A"
   },
   {
-    "title": "Journal of Consumer Research",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting Auditing and Accountability Journal",
+    "rating": "A*"
   },
   {
-    "title": "Journal of Finance",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting Education",
+    "rating": "A"
   },
   {
-    "title": "Journal of International Business Studies",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting History",
+    "rating": "A"
   },
   {
-    "title": "Journal of Management",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting Horizons",
+    "rating": "A"
   },
   {
-    "title": "Journal of Marketing",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting in Europe",
+    "rating": "A"
   },
   {
-    "title": "Journal of Marketing Research",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Accounting, Organizations and Society",
+    "rating": "A*"
   },
   {
-    "title": "Journal of Operations Management",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "ACM Transactions on Computer-Human Interaction",
+    "rating": "A*"
   },
   {
-    "title": "Journal of Retailing",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Acta Psychologica",
+    "rating": "A"
   },
   {
-    "title": "Management Science",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Adelaide Law Review",
+    "rating": "A"
   },
   {
-    "title": "MIS Quarterly",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Administrative Science Quarterly",
+    "rating": "A*"
   },
   {
-    "title": "Organization Science",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Advances in Accounting",
+    "rating": "A"
   },
   {
-    "title": "Production and Operations Management",
-    "rating": "A",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Advances in Accounting Behavioral Research",
+    "rating": "A"
   },
   {
-    "title": "Strategic Management Journal",
-    "rating": "A*",
-    "issn": "",
-    "issn_online": "",
-    "publisher": "",
-    "for_code": "",
-    "year": ""
+    "name": "Advances in Applied Probability",
+    "rating": "A"
+  },
+  {
+    "name": "Advances in Experimental Social Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Advances in Management Accounting",
+    "rating": "A"
+  },
+  {
+    "name": "Agricultural Economics",
+    "rating": "A"
+  },
+  {
+    "name": "AIS Transactions on Human-Computer Interaction",
+    "rating": "A"
+  },
+  {
+    "name": "Alternatives: global, local, political",
+    "rating": "A"
+  },
+  {
+    "name": "American Business Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "American Business Review",
+    "rating": "A"
+  },
+  {
+    "name": "American Economic Journal: Applied Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "American Economic Journal: Economic Policy",
+    "rating": "A*"
+  },
+  {
+    "name": "American Economic Journal: Macroeconomics",
+    "rating": "A*"
+  },
+  {
+    "name": "American Economic Journal: Microeconomics",
+    "rating": "A*"
+  },
+  {
+    "name": "American Economic Review: Insights",
+    "rating": "A*"
+  },
+  {
+    "name": "American Journal of Agricultural Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "American Journal of Comparative Law",
+    "rating": "A"
+  },
+  {
+    "name": "American Journal of Health Economics",
+    "rating": "A"
+  },
+  {
+    "name": "American Journal of Political Science",
+    "rating": "A*"
+  },
+  {
+    "name": "American Journal of Public Health",
+    "rating": "A*"
+  },
+  {
+    "name": "American Journal of Sociology",
+    "rating": "A*"
+  },
+  {
+    "name": "American Political Science Review",
+    "rating": "A*"
+  },
+  {
+    "name": "American Psychologist",
+    "rating": "A*"
+  },
+  {
+    "name": "American Sociological Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Annals of Actuarial Science",
+    "rating": "A"
+  },
+  {
+    "name": "Annals of Applied Probability",
+    "rating": "A"
+  },
+  {
+    "name": "Annals of Applied Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Annals of Operations Research",
+    "rating": "A"
+  },
+  {
+    "name": "Annals of Probability",
+    "rating": "A*"
+  },
+  {
+    "name": "Annals of Statistics",
+    "rating": "A*"
+  },
+  {
+    "name": "Annals of the Institute of Statistical Mathematics",
+    "rating": "A"
+  },
+  {
+    "name": "Annals of Tourism Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Annual Review of Organizational Psychology and Organizational Behavior",
+    "rating": "A*"
+  },
+  {
+    "name": "Annual Review of Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Annual Review of Sociology",
+    "rating": "A*"
+  },
+  {
+    "name": "Anti Trust Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Appetite",
+    "rating": "A"
+  },
+  {
+    "name": "Applied Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Applied Energy",
+    "rating": "A"
+  },
+  {
+    "name": "Applied Ontology",
+    "rating": "A"
+  },
+  {
+    "name": "Applied Psychology: An International Review",
+    "rating": "A"
+  },
+  {
+    "name": "Asia Pacific Journal of Management",
+    "rating": "A"
+  },
+  {
+    "name": "Asia Pacific Journal of Marketing and Logistics",
+    "rating": "A"
+  },
+  {
+    "name": "Asia Pacific Journal of Tourism Research",
+    "rating": "A"
+  },
+  {
+    "name": "ASTIN Bulletin",
+    "rating": "A"
+  },
+  {
+    "name": "Auditing: A Journal of Practice and Theory",
+    "rating": "A*"
+  },
+  {
+    "name": "Australasian Journal of Environmental Management",
+    "rating": "A"
+  },
+  {
+    "name": "Australasian Journal of Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Australasian Marketing Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Australian and New Zealand Journal of Criminology",
+    "rating": "A"
+  },
+  {
+    "name": "Australian and New Zealand Journal of Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Bar Review",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Business Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of Corporate Law",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of International Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of Labour Law",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of Management",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of Political Science",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Journal of Public Administration",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Australian Tax Forum",
+    "rating": "A*"
+  },
+  {
+    "name": "Australian Tax Review",
+    "rating": "A"
+  },
+  {
+    "name": "Automation in Construction",
+    "rating": "A*"
+  },
+  {
+    "name": "Bayesian Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Behavioral Research in Accounting",
+    "rating": "A"
+  },
+  {
+    "name": "Behaviour and Information Technology",
+    "rating": "A"
+  },
+  {
+    "name": "Berkeley Technology Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Bernoulli",
+    "rating": "A"
+  },
+  {
+    "name": "Bioinformatics",
+    "rating": "A"
+  },
+  {
+    "name": "Biometrika",
+    "rating": "A*"
+  },
+  {
+    "name": "Biostatistics",
+    "rating": "A"
+  },
+  {
+    "name": "Boston University Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "British Accounting Review",
+    "rating": "A*"
+  },
+  {
+    "name": "British Journal of Educational Technology",
+    "rating": "A"
+  },
+  {
+    "name": "British Journal of Industrial Relations",
+    "rating": "A*"
+  },
+  {
+    "name": "British Journal of Management",
+    "rating": "A"
+  },
+  {
+    "name": "British Journal of Political Science",
+    "rating": "A"
+  },
+  {
+    "name": "British Journal of Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "British Journal of Social Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "British Journal of Sociology",
+    "rating": "A"
+  },
+  {
+    "name": "British Tax Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Brookings Papers on Economic Activity",
+    "rating": "A"
+  },
+  {
+    "name": "Building Research and Information",
+    "rating": "A"
+  },
+  {
+    "name": "Business & Information Systems Engineering",
+    "rating": "A"
+  },
+  {
+    "name": "Business and Politics",
+    "rating": "A"
+  },
+  {
+    "name": "Business and Society",
+    "rating": "A"
+  },
+  {
+    "name": "Business Ethics Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Business History",
+    "rating": "A"
+  },
+  {
+    "name": "Business History Review",
+    "rating": "A"
+  },
+  {
+    "name": "Business Strategy and the Environment",
+    "rating": "A"
+  },
+  {
+    "name": "California Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Cambridge Journal of Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Cambridge Law Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Canadian Business Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Canadian Journal of Agricultural Economics / Revue Canadienne d Agroeconomie",
+    "rating": "A"
+  },
+  {
+    "name": "Canadian Journal of Economics / Revue Canadienne D'Economique",
+    "rating": "A"
+  },
+  {
+    "name": "Canadian Journal of Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Canadian Tax Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Capital Markets Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "China Accounting and Finance Review",
+    "rating": "A"
+  },
+  {
+    "name": "China Economic Review",
+    "rating": "A"
+  },
+  {
+    "name": "Civil Justice Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Cognitive Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Columbia Business Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Columbia Journal of Asian Law",
+    "rating": "A"
+  },
+  {
+    "name": "Columbia Journal of Law and the Arts",
+    "rating": "A"
+  },
+  {
+    "name": "Columbia Journal of Transnational Law",
+    "rating": "A"
+  },
+  {
+    "name": "Columbia Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Communication Monographs",
+    "rating": "A"
+  },
+  {
+    "name": "Communication Research",
+    "rating": "A"
+  },
+  {
+    "name": "Communication Theory",
+    "rating": "A"
+  },
+  {
+    "name": "Communications of the ACM",
+    "rating": "A"
+  },
+  {
+    "name": "Communications of the Association for Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Company and Securities Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Comparative Labor Law and Policy Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Comparative Politics",
+    "rating": "A"
+  },
+  {
+    "name": "Competition and Consumer Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Computational Statistics and Data Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Computers & Industrial Engineering",
+    "rating": "A"
+  },
+  {
+    "name": "Computers and Operations Research",
+    "rating": "A"
+  },
+  {
+    "name": "Computers and Security",
+    "rating": "A"
+  },
+  {
+    "name": "Computers in Human Behavior",
+    "rating": "A"
+  },
+  {
+    "name": "Construction Management and Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Contemporary Accounting Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Cornell Hospitality Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Cornell Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Corporate Governance: an international review",
+    "rating": "A"
+  },
+  {
+    "name": "Critical Finance Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Critical Perspectives on Accounting",
+    "rating": "A"
+  },
+  {
+    "name": "Current Issues in Tourism",
+    "rating": "A"
+  },
+  {
+    "name": "Current Legal Problems",
+    "rating": "A"
+  },
+  {
+    "name": "Dalhousie Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Data and Knowledge Engineering",
+    "rating": "A"
+  },
+  {
+    "name": "Data Base for Advances in Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Deakin Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Decision",
+    "rating": "A"
+  },
+  {
+    "name": "Decision Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Decision Sciences",
+    "rating": "A*"
+  },
+  {
+    "name": "Decision Support Systems",
+    "rating": "A*"
+  },
+  {
+    "name": "Delaware Journal of Corporate Law",
+    "rating": "A"
+  },
+  {
+    "name": "Demographic Research",
+    "rating": "A"
+  },
+  {
+    "name": "Demography",
+    "rating": "A"
+  },
+  {
+    "name": "Design Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Disasters",
+    "rating": "A"
+  },
+  {
+    "name": "Discourse & Communication",
+    "rating": "A"
+  },
+  {
+    "name": "Discourse & Society",
+    "rating": "A"
+  },
+  {
+    "name": "Discourse Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Duke Journal of Comparative and International Law",
+    "rating": "A"
+  },
+  {
+    "name": "Ecological Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Ecology",
+    "rating": "A"
+  },
+  {
+    "name": "Econometric Reviews",
+    "rating": "A"
+  },
+  {
+    "name": "Econometric Theory",
+    "rating": "A*"
+  },
+  {
+    "name": "Econometrica",
+    "rating": "A*"
+  },
+  {
+    "name": "Econometrics Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Economic and Industrial Democracy: an international journal",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Development and Cultural Change",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Geography",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Inquiry",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Modelling",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Policy: a European forum",
+    "rating": "A"
+  },
+  {
+    "name": "Economic Theory",
+    "rating": "A*"
+  },
+  {
+    "name": "Economica",
+    "rating": "A"
+  },
+  {
+    "name": "Economics & Politics",
+    "rating": "A"
+  },
+  {
+    "name": "Economics and Human Biology",
+    "rating": "A"
+  },
+  {
+    "name": "Economics and Philosophy",
+    "rating": "A"
+  },
+  {
+    "name": "Economics Letters",
+    "rating": "A"
+  },
+  {
+    "name": "Economics of Education Review",
+    "rating": "A"
+  },
+  {
+    "name": "Economy and Society",
+    "rating": "A"
+  },
+  {
+    "name": "Education Finance and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Educational and Psychological Measurement",
+    "rating": "A"
+  },
+  {
+    "name": "eJournal of Tax Research",
+    "rating": "A"
+  },
+  {
+    "name": "Electronic Commerce Research",
+    "rating": "A"
+  },
+  {
+    "name": "Electronic Journal of Probability",
+    "rating": "A"
+  },
+  {
+    "name": "Electronic Markets",
+    "rating": "A"
+  },
+  {
+    "name": "Emerging Markets Review",
+    "rating": "A"
+  },
+  {
+    "name": "Empirical Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Energy Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Energy Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Energy Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Engineering, Construction and Architectural Management",
+    "rating": "A"
+  },
+  {
+    "name": "Enterprise and Society",
+    "rating": "A"
+  },
+  {
+    "name": "Enterprise Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Entrepreneurship and Regional Development",
+    "rating": "A"
+  },
+  {
+    "name": "Entrepreneurship Theory and Practice",
+    "rating": "A*"
+  },
+  {
+    "name": "Environment and Planning A: Economy and Space",
+    "rating": "A*"
+  },
+  {
+    "name": "Environment and Planning B: planning and design",
+    "rating": "A*"
+  },
+  {
+    "name": "Environment and Planning D: society and space",
+    "rating": "A"
+  },
+  {
+    "name": "Environmental and Ecological Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Environmental and Resource Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Environmental Education Research",
+    "rating": "A"
+  },
+  {
+    "name": "Ethics: an international journal of social, political, and legal philosophy",
+    "rating": "A"
+  },
+  {
+    "name": "European Competition Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "European Economic Review",
+    "rating": "A*"
+  },
+  {
+    "name": "European Financial Management",
+    "rating": "A"
+  },
+  {
+    "name": "European Intellectual Property Review",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Health Economics",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Industrial Relations",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Information Systems",
+    "rating": "A*"
+  },
+  {
+    "name": "European Journal of International Law",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of International Relations",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Marketing",
+    "rating": "A*"
+  },
+  {
+    "name": "European Journal of Operational Research",
+    "rating": "A*"
+  },
+  {
+    "name": "European Journal of Personality",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Political Economy",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Political Research",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Social Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Sociology",
+    "rating": "A"
+  },
+  {
+    "name": "European Journal of Work and Organizational Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "European Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "European Review of Agricultural Economics",
+    "rating": "A"
+  },
+  {
+    "name": "European Review of Economic History",
+    "rating": "A"
+  },
+  {
+    "name": "European Sport Management Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "European Urban and Regional Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Evaluation Review",
+    "rating": "A"
+  },
+  {
+    "name": "Event Management",
+    "rating": "A"
+  },
+  {
+    "name": "Experimental Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Explorations in Economic History",
+    "rating": "A"
+  },
+  {
+    "name": "Family Business Review",
+    "rating": "A"
+  },
+  {
+    "name": "Federal Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Feminist Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Finance and Stochastics",
+    "rating": "A"
+  },
+  {
+    "name": "Finance Research Letters",
+    "rating": "A"
+  },
+  {
+    "name": "Financial Accountability and Management",
+    "rating": "A"
+  },
+  {
+    "name": "Financial Analysts Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Financial Management",
+    "rating": "A"
+  },
+  {
+    "name": "Financial Review (US)",
+    "rating": "A"
+  },
+  {
+    "name": "Food Quality and Preference",
+    "rating": "A"
+  },
+  {
+    "name": "Foreign Affairs",
+    "rating": "A*"
+  },
+  {
+    "name": "Foreign Policy (Washington)",
+    "rating": "A*"
+  },
+  {
+    "name": "Foundations and Trends in Accounting",
+    "rating": "A"
+  },
+  {
+    "name": "Games and Economic Behavior",
+    "rating": "A*"
+  },
+  {
+    "name": "Gender and Society",
+    "rating": "A*"
+  },
+  {
+    "name": "Gender, Work and Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Global Environmental Change",
+    "rating": "A*"
+  },
+  {
+    "name": "Global Finance Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Global Journal of Flexible Systems Management",
+    "rating": "A"
+  },
+  {
+    "name": "Global Networks: A Journal of Transnational Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "Global Strategy Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Government Information Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Group & Organization Management",
+    "rating": "A"
+  },
+  {
+    "name": "Group Decision and Negotiation",
+    "rating": "A"
+  },
+  {
+    "name": "Habitat International",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard Business Review",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard Environmental Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard International Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard Journal of Law and Public Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard Journal of Law and Technology",
+    "rating": "A"
+  },
+  {
+    "name": "Harvard Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Health Care Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Health Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Health Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Health Promotion International",
+    "rating": "A"
+  },
+  {
+    "name": "Health Services Research",
+    "rating": "A"
+  },
+  {
+    "name": "History of Political Economy",
+    "rating": "A"
+  },
+  {
+    "name": "Hong Kong Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Housing Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Human Communication Research",
+    "rating": "A"
+  },
+  {
+    "name": "Human Performance",
+    "rating": "A"
+  },
+  {
+    "name": "Human Relations",
+    "rating": "A*"
+  },
+  {
+    "name": "Human Resource Management (US)",
+    "rating": "A*"
+  },
+  {
+    "name": "Human Resource Management Journal (UK)",
+    "rating": "A"
+  },
+  {
+    "name": "Human Resource Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Human-Computer Interaction",
+    "rating": "A"
+  },
+  {
+    "name": "IBM Systems Journal",
+    "rating": "A"
+  },
+  {
+    "name": "IEEE Transactions on Engineering Management",
+    "rating": "A"
+  },
+  {
+    "name": "IEEE Transactions on Intelligent Transportation Systems",
+    "rating": "A"
+  },
+  {
+    "name": "IEEE Transactions on Vehicular Technology",
+    "rating": "A"
+  },
+  {
+    "name": "IIC International Review of Intellectual Property and Competition Law",
+    "rating": "A"
+  },
+  {
+    "name": "IISE Transactions",
+    "rating": "A"
+  },
+  {
+    "name": "ILR Review (Industrial and Labor Relations Review)",
+    "rating": "A*"
+  },
+  {
+    "name": "IMF Economic Review",
+    "rating": "A"
+  },
+  {
+    "name": "Industrial and Corporate Change",
+    "rating": "A"
+  },
+  {
+    "name": "Industrial Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Industrial Management & Data Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Industrial Marketing Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Industrial Relations Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Industrial Relations: a journal of economy and society",
+    "rating": "A*"
+  },
+  {
+    "name": "Information & Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Information and Organization",
+    "rating": "A*"
+  },
+  {
+    "name": "Information and Software Technology",
+    "rating": "A"
+  },
+  {
+    "name": "Information Economics and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Information Systems Frontiers",
+    "rating": "A"
+  },
+  {
+    "name": "Information Systems Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Information Systems Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Information Technology & People",
+    "rating": "A"
+  },
+  {
+    "name": "Information, Communication & Society",
+    "rating": "A"
+  },
+  {
+    "name": "Insolvency Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Insurance Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Insurance: Mathematics & Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Intellectual Property Journal",
+    "rating": "A"
+  },
+  {
+    "name": "International & Comparative Law Quarterly",
+    "rating": "A*"
+  },
+  {
+    "name": "International Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "International and Comparative Corporate Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "International Business Review",
+    "rating": "A"
+  },
+  {
+    "name": "International Economic Review",
+    "rating": "A*"
+  },
+  {
+    "name": "International Environmental Agreements: Politics, Law and Economics",
+    "rating": "A"
+  },
+  {
+    "name": "International Insurance Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Accounting Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Advertising",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Auditing",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Bank Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Central Banking",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Conflict Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Consumer Studies",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Contemporary Hospitality Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Cooperative Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Cultural Policy",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Disaster Risk Reduction",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Electronic Commerce",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Forecasting",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Game Theory",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of General Systems",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Hospitality Management",
+    "rating": "A*"
+  },
+  {
+    "name": "International Journal of Human Resource Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Industrial Organization",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Information Management",
+    "rating": "A*"
+  },
+  {
+    "name": "International Journal of Intercultural Relations",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Law and Information Technology",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Management Reviews",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Managerial Finance",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Manpower",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Market Research",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Medical Informatics",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Operations & Production Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Physical Distribution & Logistics Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Production Economics",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Production Research",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Project Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Public Opinion Research",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Research in Marketing",
+    "rating": "A*"
+  },
+  {
+    "name": "International Journal of Retail & Distribution Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Selection and Assessment",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Stress Management",
+    "rating": "A"
+  },
+  {
+    "name": "International Journal of Tourism Research",
+    "rating": "A"
+  },
+  {
+    "name": "International Marketing Review",
+    "rating": "A"
+  },
+  {
+    "name": "International Migration",
+    "rating": "A"
+  },
+  {
+    "name": "International Migration Review",
+    "rating": "A"
+  },
+  {
+    "name": "International Negotiation: a journal of theory and practice",
+    "rating": "A"
+  },
+  {
+    "name": "International Review of Economics & Finance",
+    "rating": "A"
+  },
+  {
+    "name": "International Review of Finance",
+    "rating": "A"
+  },
+  {
+    "name": "International Review of Financial Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "International Small Business Journal",
+    "rating": "A"
+  },
+  {
+    "name": "International Statistical Review",
+    "rating": "A"
+  },
+  {
+    "name": "International Studies Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Internet Research",
+    "rating": "A"
+  },
+  {
+    "name": "Issues in Accounting Education",
+    "rating": "A"
+  },
+  {
+    "name": "IZA Journal of Labor Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Accounting and Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Accounting and Public Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Accounting Auditing and Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Accounting Literature",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Accounting Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Advanced Transportation",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Advertising",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Advertising Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of African Economies",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Agricultural and Resource Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Agricultural Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Air Law and Commerce",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Applied Corporate Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Applied Econometrics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Applied Probability",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Applied Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Applied Sport Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Banking & Finance",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Banking and Finance - Law and Practice",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Behavioral and Experimental Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Behavioral and Experimental Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Behavioral Decision Making",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Behavioral Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Brand Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business & Economic Statistics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Business & Industrial Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business and Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business Ethics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business Finance & Accounting",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Business Law",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business Logistics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Business Venturing",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Business Venturing Insights",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Career Assessment",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Cleaner Production",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Commodity Markets",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Communication",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Comparative Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Computational and Graphical Statistics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Computer Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Conflict Resolution",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Construction Engineering and Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Consumer Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Consumer Behaviour",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Consumer Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Consumer Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Consumer Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Contemporary Accounting and Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Contract Law",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Corporate Finance",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Corporate Law Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Cross-Cultural Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Cultural Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Database Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Destination Marketing & Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Development Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Development Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Econometrics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Behavior and Organization",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Dynamics and Control",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Geography",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Economic Growth",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Literature",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Perspectives",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economic Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Economic Science Association",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Economic Surveys",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Economic Theory",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Economics & Management Strategy",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Empirical Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Empirical Legal Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Employment Counseling",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Enterprise Information Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Environmental Economics and Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Environmental Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of European Public Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Evolutionary Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Experimental Psychology: Applied",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Experimental Psychology: general",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Experimental Psychology: learning, memory, and cognition",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Experimental Social Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Financial and Quantitative Analysis",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Financial Econometrics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Financial Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Financial Intermediation",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Financial Markets",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Financial Reporting",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Financial Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Financial Services Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Financial Stability",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Forecasting",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Gambling Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Global Information Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Health Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Health Politics, Policy and Law",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Hospitality and Tourism Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Hospitality and Tourism Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Hospitality Marketing and Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Housing Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Human Capital",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Human Resources",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Industrial Relations",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Information Technology",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Information Technology Theory and Application",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Innovation & Knowledge",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Institutional and Theoretical Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Interactive Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Accounting Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Business Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of International Economic Law",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of International Financial Markets, Institutions and Money",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of International Money and Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Knowledge Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Labor Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Law, Economics and Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Leisure Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Macroeconomics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Macromarketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Management Accounting Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Management Control",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Management in Engineering",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Management Information Systems",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Management Inquiry",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Management Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Maritime Law and Commerce",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Marketing",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Marketing Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Marketing Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Mathematical Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Monetary Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Money, Credit and Banking",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Multivariate Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Occupational and Organizational Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Occupational Health Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Operations Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Optimization Theory and Applications",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Organizational Behavior",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Organizational Computing and Electronic Commerce",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Personal Selling & Sales Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Personality",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Personality and Social Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Personality Assessment",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Policy Analysis and Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Policy Modeling",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Political Economy",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Population Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Population Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Product & Brand Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Product Innovation Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Productivity Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Professions and Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Public Administration Research and Theory",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Public Economic Theory",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Public Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Public Policy and Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Purchasing and Supply Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Quality Technology",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Real Estate Finance and Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Regional Science",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Regulatory Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Research in Personality",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Retailing",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Retailing and Consumer Services",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Risk and Insurance",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Risk and Uncertainty",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Safety Research",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Scheduling",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Service Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Service Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Service Theory and Practice",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Services Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Small Business Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Social Issues",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Social Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Sport Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Statistical Planning and Inference",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Statistical Software",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Strategic Information Systems",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Strategic Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Supply Chain Management",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Sustainable Tourism",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the Academy of Marketing Science",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the American Medical Informatics Association",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the American Statistical Association",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the American Taxation Association",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the Association for Information Science and Technology",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the Association for Information Systems",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the Association of Environmental and Resource Economists",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the European Economic Association",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the Japanese and International Economies",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the Operational Research Society",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the Royal Statistical Society, Series A (Statistics in Society)",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the Royal Statistical Society, Series B (Statistical Methodology)",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of the Royal Statistical Society, Series C (Applied Statistics)",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of the Royal Statistical Society, Series D (The Statistician)",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Theoretical Probability",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Time Series Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Transport Geography",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Transport, Economics and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Travel & Tourism Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Travel Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Urban Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Urban Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of Vacation Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Journal of Vocational Behavior",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of World Business",
+    "rating": "A*"
+  },
+  {
+    "name": "Journal of World Investment and Trade",
+    "rating": "A"
+  },
+  {
+    "name": "Judgment and Decision Making",
+    "rating": "A"
+  },
+  {
+    "name": "Knowledge Management Research and Practice",
+    "rating": "A"
+  },
+  {
+    "name": "Knowledge-Based Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Kyklos",
+    "rating": "A"
+  },
+  {
+    "name": "Labor History",
+    "rating": "A"
+  },
+  {
+    "name": "Labour Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Labour History: a journal of labour and social history",
+    "rating": "A"
+  },
+  {
+    "name": "Land Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Land Use Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Law and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Law Quarterly Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Legal Issues of Economic Integration",
+    "rating": "A"
+  },
+  {
+    "name": "Leisure Sciences: an interdisciplinary journal",
+    "rating": "A"
+  },
+  {
+    "name": "Leisure Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Lloyd's Maritime and Commercial Law Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Local Government Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Long Range Planning",
+    "rating": "A"
+  },
+  {
+    "name": "Macroeconomic Dynamics",
+    "rating": "A"
+  },
+  {
+    "name": "Management Accounting Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Management and Organization Review",
+    "rating": "A"
+  },
+  {
+    "name": "Management International Review",
+    "rating": "A"
+  },
+  {
+    "name": "Management Learning",
+    "rating": "A"
+  },
+  {
+    "name": "Management Science",
+    "rating": "A*"
+  },
+  {
+    "name": "Managerial Auditing Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Manufacturing and Service Operations Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Marine Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Marine Resource Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Marketing Intelligence & Planning",
+    "rating": "A"
+  },
+  {
+    "name": "Marketing Letters",
+    "rating": "A"
+  },
+  {
+    "name": "Marketing Science",
+    "rating": "A*"
+  },
+  {
+    "name": "Marketing Theory",
+    "rating": "A"
+  },
+  {
+    "name": "Mathematical Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Mathematical Social Sciences",
+    "rating": "A"
+  },
+  {
+    "name": "Mathematics of Operations Research",
+    "rating": "A"
+  },
+  {
+    "name": "Meditari Accountancy Research",
+    "rating": "A"
+  },
+  {
+    "name": "Melbourne Journal of International Law",
+    "rating": "A"
+  },
+  {
+    "name": "Melbourne University Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "MIS Quarterly",
+    "rating": "A*"
+  },
+  {
+    "name": "MIS Quarterly Executive",
+    "rating": "A"
+  },
+  {
+    "name": "MIT Sloan Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Monash University Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Motivation and Emotion",
+    "rating": "A"
+  },
+  {
+    "name": "Multivariate Behavioral Research",
+    "rating": "A"
+  },
+  {
+    "name": "National Tax Journal",
+    "rating": "A"
+  },
+  {
+    "name": "NBER Macroeconomics Annual",
+    "rating": "A"
+  },
+  {
+    "name": "New Political Economy",
+    "rating": "A"
+  },
+  {
+    "name": "New Technology, Work & Employment",
+    "rating": "A"
+  },
+  {
+    "name": "New Zealand Journal of Taxation Law and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "New Zealand Universities Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Nonprofit and Voluntary Sector Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "North American Actuarial Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Omega",
+    "rating": "A"
+  },
+  {
+    "name": "Operations Research",
+    "rating": "A*"
+  },
+  {
+    "name": "Operations Research Letters",
+    "rating": "A"
+  },
+  {
+    "name": "Oregon Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Organization & Environment",
+    "rating": "A"
+  },
+  {
+    "name": "Organization Science",
+    "rating": "A*"
+  },
+  {
+    "name": "Organization Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Organizational Behavior and Human Decision Processes",
+    "rating": "A*"
+  },
+  {
+    "name": "Organizational Dynamics",
+    "rating": "A"
+  },
+  {
+    "name": "Organizational Psychology Review",
+    "rating": "A"
+  },
+  {
+    "name": "Organizational Research Methods",
+    "rating": "A*"
+  },
+  {
+    "name": "Osgoode Hall Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Oxford Bulletin of Economics and Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Oxford Economic Papers",
+    "rating": "A"
+  },
+  {
+    "name": "Oxford Journal of Legal Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Oxford Review of Economic Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Oxford University Commonwealth Law Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Pacific-Basin Finance Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Papers in Regional Science",
+    "rating": "A"
+  },
+  {
+    "name": "Personal and Ubiquitous Computing",
+    "rating": "A"
+  },
+  {
+    "name": "Personality and Individual Differences",
+    "rating": "A"
+  },
+  {
+    "name": "Personality and Social Psychology Bulletin",
+    "rating": "A*"
+  },
+  {
+    "name": "Personality and Social Psychology Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Personnel Psychology",
+    "rating": "A*"
+  },
+  {
+    "name": "Personnel Review",
+    "rating": "A"
+  },
+  {
+    "name": "PharmacoEconomics",
+    "rating": "A"
+  },
+  {
+    "name": "Philosophy & Public Affairs",
+    "rating": "A"
+  },
+  {
+    "name": "Poetics",
+    "rating": "A"
+  },
+  {
+    "name": "Policy and Politics: an international journal",
+    "rating": "A"
+  },
+  {
+    "name": "Political Communication",
+    "rating": "A"
+  },
+  {
+    "name": "Political Science Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Politics and Gender",
+    "rating": "A"
+  },
+  {
+    "name": "Population and Development Review",
+    "rating": "A"
+  },
+  {
+    "name": "Population and Environment",
+    "rating": "A"
+  },
+  {
+    "name": "Population Bulletin",
+    "rating": "A"
+  },
+  {
+    "name": "Population Research and Policy Review",
+    "rating": "A"
+  },
+  {
+    "name": "Population Studies: a journal of demography",
+    "rating": "A"
+  },
+  {
+    "name": "Population, Space and Place",
+    "rating": "A"
+  },
+  {
+    "name": "Probability Theory and Related Fields",
+    "rating": "A*"
+  },
+  {
+    "name": "Production and Operations Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Production Planning and Control",
+    "rating": "A"
+  },
+  {
+    "name": "Psychological Bulletin",
+    "rating": "A*"
+  },
+  {
+    "name": "Psychological Research",
+    "rating": "A"
+  },
+  {
+    "name": "Psychological Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Psychological Science",
+    "rating": "A*"
+  },
+  {
+    "name": "Psychology & Marketing",
+    "rating": "A"
+  },
+  {
+    "name": "Psychology of Women Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Public Administration and Development",
+    "rating": "A"
+  },
+  {
+    "name": "Public Administration Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Public Administration Review",
+    "rating": "A"
+  },
+  {
+    "name": "Public Administration: an international journal",
+    "rating": "A"
+  },
+  {
+    "name": "Public Choice",
+    "rating": "A"
+  },
+  {
+    "name": "Public Law: the constitutional and administrative law of the Commonwealth",
+    "rating": "A"
+  },
+  {
+    "name": "Public Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Public Opinion Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Public Relations Review",
+    "rating": "A"
+  },
+  {
+    "name": "Qualitative Research in Accounting and Management",
+    "rating": "A"
+  },
+  {
+    "name": "Quality of Life Research",
+    "rating": "A"
+  },
+  {
+    "name": "Quantitative Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Quantitative Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Quantitative Marketing and Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Quarterly Journal of Experimental Psychology",
+    "rating": "A"
+  },
+  {
+    "name": "Quarterly Journal of Finance",
+    "rating": "A"
+  },
+  {
+    "name": "R&D Management",
+    "rating": "A"
+  },
+  {
+    "name": "RAND Journal of Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Real Estate Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Regional Science and Urban Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Regional Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Regional Studies, Regional Science",
+    "rating": "A"
+  },
+  {
+    "name": "Regulation and Governance",
+    "rating": "A"
+  },
+  {
+    "name": "Reliability Engineering & System Safety",
+    "rating": "A"
+  },
+  {
+    "name": "Research in Organizational Behavior",
+    "rating": "A"
+  },
+  {
+    "name": "Research in the Sociology of Organizations",
+    "rating": "A"
+  },
+  {
+    "name": "Research Policy",
+    "rating": "A*"
+  },
+  {
+    "name": "Research-Technology Management",
+    "rating": "A"
+  },
+  {
+    "name": "Resource and Energy Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Restitution Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Review of Accounting Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Review of Asset Pricing Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Review of Corporate Finance Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Review of Economic Dynamics",
+    "rating": "A*"
+  },
+  {
+    "name": "Review of Economics of the Household",
+    "rating": "A"
+  },
+  {
+    "name": "Review of Environmental Economics and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Review of Finance",
+    "rating": "A*"
+  },
+  {
+    "name": "Review of Income and Wealth",
+    "rating": "A"
+  },
+  {
+    "name": "Review of Industrial Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Review of International Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Review of International Political Economy",
+    "rating": "A"
+  },
+  {
+    "name": "Safety Science",
+    "rating": "A"
+  },
+  {
+    "name": "Scandinavian Actuarial Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Scandinavian Journal of Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Scandinavian Journal of Hospitality and Tourism",
+    "rating": "A"
+  },
+  {
+    "name": "Scandinavian Journal of Information Systems",
+    "rating": "A"
+  },
+  {
+    "name": "Scandinavian Journal of Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "Science Communication",
+    "rating": "A"
+  },
+  {
+    "name": "Science, Technology, & Human Values",
+    "rating": "A"
+  },
+  {
+    "name": "Scientometrics",
+    "rating": "A"
+  },
+  {
+    "name": "Scottish Journal of Political Economy",
+    "rating": "A"
+  },
+  {
+    "name": "Security Dialogue",
+    "rating": "A"
+  },
+  {
+    "name": "Sex Roles",
+    "rating": "A"
+  },
+  {
+    "name": "SIAM Journal on Applied Mathematics",
+    "rating": "A"
+  },
+  {
+    "name": "Singapore Journal of Legal Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Small Business Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Small Group Research",
+    "rating": "A"
+  },
+  {
+    "name": "Social Choice and Welfare",
+    "rating": "A"
+  },
+  {
+    "name": "Social Forces",
+    "rating": "A"
+  },
+  {
+    "name": "Social Indicators Research",
+    "rating": "A"
+  },
+  {
+    "name": "Social Policy & Administration",
+    "rating": "A"
+  },
+  {
+    "name": "Social Problems",
+    "rating": "A"
+  },
+  {
+    "name": "Socio-Economic Review",
+    "rating": "A"
+  },
+  {
+    "name": "Sociological Inquiry",
+    "rating": "A"
+  },
+  {
+    "name": "Sociological Methodology",
+    "rating": "A"
+  },
+  {
+    "name": "Sociological Methods & Research",
+    "rating": "A"
+  },
+  {
+    "name": "Sociological Theory",
+    "rating": "A"
+  },
+  {
+    "name": "Sociology",
+    "rating": "A*"
+  },
+  {
+    "name": "Sociology of Sport Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Southern Economic Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Sport Management Review",
+    "rating": "A"
+  },
+  {
+    "name": "Stanford Journal of International Law",
+    "rating": "A"
+  },
+  {
+    "name": "Stanford Journal of Law, Business and Finance",
+    "rating": "A"
+  },
+  {
+    "name": "Statistica Neerlandica",
+    "rating": "A"
+  },
+  {
+    "name": "Statistica Sinica",
+    "rating": "A"
+  },
+  {
+    "name": "Statistical Science",
+    "rating": "A"
+  },
+  {
+    "name": "Statistics and Computing",
+    "rating": "A"
+  },
+  {
+    "name": "Statistics in Medicine",
+    "rating": "A"
+  },
+  {
+    "name": "Statute Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Stochastic Processes and their Applications",
+    "rating": "A"
+  },
+  {
+    "name": "Strategic Entrepreneurship Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Strategic Management Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Strategic Organization",
+    "rating": "A"
+  },
+  {
+    "name": "Strategy Science",
+    "rating": "A"
+  },
+  {
+    "name": "Stress and Health",
+    "rating": "A"
+  },
+  {
+    "name": "Structural Equation Modelling: A Multidisciplinary Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Studies in Comparative International Development",
+    "rating": "A"
+  },
+  {
+    "name": "Studies in Higher Education",
+    "rating": "A"
+  },
+  {
+    "name": "Studies in Nonlinear Dynamics & Econometrics",
+    "rating": "A"
+  },
+  {
+    "name": "Supply Chain Management: an international journal",
+    "rating": "A"
+  },
+  {
+    "name": "System Dynamics Review",
+    "rating": "A"
+  },
+  {
+    "name": "Systems Research and Behavioral Science",
+    "rating": "A"
+  },
+  {
+    "name": "Tax Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Technological Forecasting and Social Change",
+    "rating": "A"
+  },
+  {
+    "name": "Technometrics",
+    "rating": "A"
+  },
+  {
+    "name": "Technovation",
+    "rating": "A"
+  },
+  {
+    "name": "Texas International Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "The Accounting Review",
+    "rating": "A*"
+  },
+  {
+    "name": "The American Economic Review",
+    "rating": "A*"
+  },
+  {
+    "name": "The Australian Journal of Agricultural and Resource Economics",
+    "rating": "A"
+  },
+  {
+    "name": "The BE Journal of Economic Analysis and Policy",
+    "rating": "A"
+  },
+  {
+    "name": "The BE Journal of Macroeconomics",
+    "rating": "A"
+  },
+  {
+    "name": "The BE Journal of Theoretical Economics",
+    "rating": "A"
+  },
+  {
+    "name": "The Business Lawyer",
+    "rating": "A"
+  },
+  {
+    "name": "The China Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "The Economic History Review: a journal of economic and social history",
+    "rating": "A"
+  },
+  {
+    "name": "The Economic Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "The Economic Record",
+    "rating": "A"
+  },
+  {
+    "name": "The Economics of Transition",
+    "rating": "A"
+  },
+  {
+    "name": "The Electronic Journal of Statistics",
+    "rating": "A"
+  },
+  {
+    "name": "The European Accounting Review",
+    "rating": "A*"
+  },
+  {
+    "name": "The European Journal of Finance",
+    "rating": "A"
+  },
+  {
+    "name": "The Florida Tax Review",
+    "rating": "A"
+  },
+  {
+    "name": "The Information Society",
+    "rating": "A"
+  },
+  {
+    "name": "The International Journal of Accounting",
+    "rating": "A"
+  },
+  {
+    "name": "The International Journal of Logistics Management",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Derivatives",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Economic History",
+    "rating": "A*"
+  },
+  {
+    "name": "The Journal of Economic Inequality",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Finance",
+    "rating": "A*"
+  },
+  {
+    "name": "The Journal of Fixed Income",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Futures Markets",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Industrial Economics",
+    "rating": "A"
+  },
+  {
+    "name": "The Journal of Law and Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "The Journal of Portfolio Management",
+    "rating": "A"
+  },
+  {
+    "name": "The Leadership Quarterly",
+    "rating": "A*"
+  },
+  {
+    "name": "The Modern Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "The Pacific Review",
+    "rating": "A"
+  },
+  {
+    "name": "The Quarterly Journal of Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "The Review of Economic Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "The Review of Economics and Statistics",
+    "rating": "A*"
+  },
+  {
+    "name": "The Review of Financial Studies",
+    "rating": "A*"
+  },
+  {
+    "name": "The Sociological Review",
+    "rating": "A"
+  },
+  {
+    "name": "The Sydney Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "The World Bank Economic Review",
+    "rating": "A"
+  },
+  {
+    "name": "The World Economy",
+    "rating": "A"
+  },
+  {
+    "name": "The Yale Law Journal",
+    "rating": "A*"
+  },
+  {
+    "name": "Theoretical Economics",
+    "rating": "A*"
+  },
+  {
+    "name": "Theory and Decision: an international journal for multidisciplinary advances in decision sciences",
+    "rating": "A"
+  },
+  {
+    "name": "Theory of Probability and its Applications",
+    "rating": "A"
+  },
+  {
+    "name": "Theory, Culture and Society",
+    "rating": "A"
+  },
+  {
+    "name": "Third World Quarterly",
+    "rating": "A"
+  },
+  {
+    "name": "Tort Law Review",
+    "rating": "A"
+  },
+  {
+    "name": "Torts Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Tourism Analysis",
+    "rating": "A"
+  },
+  {
+    "name": "Tourism Economics",
+    "rating": "A"
+  },
+  {
+    "name": "Tourism Geographies",
+    "rating": "A"
+  },
+  {
+    "name": "Tourism Management",
+    "rating": "A*"
+  },
+  {
+    "name": "Tourism Management Perspectives",
+    "rating": "A"
+  },
+  {
+    "name": "Tourism Recreation Research",
+    "rating": "A"
+  },
+  {
+    "name": "Transport Policy",
+    "rating": "A"
+  },
+  {
+    "name": "Transport Reviews",
+    "rating": "A"
+  },
+  {
+    "name": "Transportation",
+    "rating": "A"
+  },
+  {
+    "name": "Transportation Research Part A: Policy and Practice",
+    "rating": "A*"
+  },
+  {
+    "name": "Transportation Research Part B: Methodological",
+    "rating": "A*"
+  },
+  {
+    "name": "Transportation Research Part C: Emerging Technologies",
+    "rating": "A*"
+  },
+  {
+    "name": "Transportation Research Part D: Transport and Environment",
+    "rating": "A"
+  },
+  {
+    "name": "Transportation Research Part E: Logistics and Transportation Review",
+    "rating": "A*"
+  },
+  {
+    "name": "Transportation Research Part F: Traffic Psychology and Behaviour",
+    "rating": "A"
+  },
+  {
+    "name": "Transportation Science",
+    "rating": "A"
+  },
+  {
+    "name": "Tulane Maritime Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "University of Chicago Law Review",
+    "rating": "A*"
+  },
+  {
+    "name": "University of New South Wales Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "University of Toronto Law Journal",
+    "rating": "A"
+  },
+  {
+    "name": "Urban Studies: an international journal for research in urban studies",
+    "rating": "A*"
+  },
+  {
+    "name": "Virginia Tax Review",
+    "rating": "A"
+  },
+  {
+    "name": "Visitor Studies",
+    "rating": "A"
+  },
+  {
+    "name": "Water Resources Research",
+    "rating": "A"
+  },
+  {
+    "name": "Work & Stress: An international Journal of Work, Health and Organisations",
+    "rating": "A"
+  },
+  {
+    "name": "Work and Occupations",
+    "rating": "A"
+  },
+  {
+    "name": "Work, Employment and Society",
+    "rating": "A"
+  },
+  {
+    "name": "World Development",
+    "rating": "A"
+  },
+  {
+    "name": "World Politics",
+    "rating": "A"
+ 
   }
 ]

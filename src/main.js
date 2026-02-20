@@ -1,21 +1,38 @@
+// public/app.js
+
+const DATA_PATH = "/data/abdc.json"; // public/data/abdc.json 會以 /data/abdc.json 提供
+const RUNTIME_SOURCE = "public/data/abdc.json";
+
 const input = document.getElementById("journal-input");
-const button = document.getElementById("search-btn");
 const result = document.getElementById("result");
-const loadedNote = document.getElementById("loaded-note");
+const status = document.getElementById("loaded-count");
+
+// 下面這些在你的 index.html 可能沒有，所以要容錯
+const source = document.getElementById("data-source");
+const fields = document.getElementById("field-info");
 
 let journals = [];
+let journalIndex = new Map();
 
 function normalize(text) {
-  let value = String(text || "").toLowerCase();
-  value = value.replace(/&/g, " and ");
-  value = value.replace(/^\s*the\s+/i, "");
-  value = value.replace(/[^a-z0-9\s]/g, " ");
-  value = value.replace(/\s+/g, " ").trim();
-  return value;
+  // 大小寫不敏感、忽略標點/空白、& 視為 and、忽略開頭 the
+  return String(text || "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/^\s*the\s+/i, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\s+/g, "");
 }
 
-function compact(text) {
-  return normalize(text).replace(/\s+/g, "");
+function getTitle(item) {
+  return String(item?.title || item?.name || "").trim();
+}
+
+function getRating(item) {
+  const v = item?.rating ?? item?.rank ?? "N/A";
+  return String(v).trim() || "N/A";
 }
 
 function levenshtein(a, b) {
@@ -25,89 +42,116 @@ function levenshtein(a, b) {
   for (let i = 1; i <= a.length; i += 1) {
     for (let j = 1; j <= b.length; j += 1) {
       const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      matrix[i][j] = Math.min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost);
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
     }
   }
-
   return matrix[a.length][b.length];
 }
 
-function suggestionsFor(query, list, count = 5) {
-  const normalizedQuery = compact(query);
-  return list
+function buildLookupIndex(items) {
+  const index = new Map();
+  for (const item of items) {
+    const key = normalize(getTitle(item));
+    if (key && !index.has(key)) index.set(key, item);
+  }
+  return index;
+}
+
+function findSuggestions(query, count = 5) {
+  const normalizedQuery = normalize(query);
+  if (!normalizedQuery) return [];
+
+  return journals
     .map((item) => {
-      const normalizedTitle = compact(item.title);
+      const title = getTitle(item);
+      const normalizedTitle = normalize(title);
+      const distance = levenshtein(normalizedQuery, normalizedTitle);
+      const startsWithBonus = normalizedTitle.startsWith(normalizedQuery) ? -2 : 0;
+
       return {
         ...item,
-        score: levenshtein(normalizedQuery, normalizedTitle)
+        _title: title,
+        _score: distance + startsWithBonus,
       };
     })
-    .sort((a, b) => a.score - b.score)
+    .sort((a, b) => a._score - b._score)
     .slice(0, count);
 }
 
 function renderFound(journal) {
   result.className = "result-card found";
   result.innerHTML = `
-    <h2>Found in ABDC list</h2>
-    <p><strong>${journal.title}</strong></p>
-    <p>Rating: <strong>${journal.rating || "N/A"}</strong></p>
-    <p>ISSN: ${journal.issn || "N/A"}</p>
-    <p>Online ISSN: ${journal.issn_online || "N/A"}</p>
-    <p>Publisher: ${journal.publisher || "N/A"}</p>
-    <p>FoR: ${journal.for_code || "N/A"}</p>
-    <p>Year inception: ${journal.year || "N/A"}</p>
+    <h2>FOUND</h2>
+    <p><strong>${getTitle(journal)}</strong></p>
+    <p>Rating: <strong>${getRating(journal)}</strong></p>
   `;
 }
 
 function renderNotFound(query) {
-  const suggestions = suggestionsFor(query, journals)
-    .map((item) => `<li>${item.title} <span class="rank">(${item.rating || "N/A"})</span></li>`)
+  const suggestions = findSuggestions(query);
+  const suggestionItems = suggestions
+    .map((item) => `<li>${getTitle(item)} <span class="rank">(${getRating(item)})</span></li>`)
     .join("");
 
   result.className = "result-card not-found";
   result.innerHTML = `
-    <h2>Not found in ABDC list</h2>
-    <p><strong>${query}</strong> is not an exact normalized match.</p>
-    <p>Top suggestions:</p>
-    <ul>${suggestions}</ul>
+    <h2>NOT FOUND</h2>
+    <p><strong>${query}</strong> is not an exact match.</p>
+    <p class="suggestion-title">Suggestions:</p>
+    <ul>${suggestionItems}</ul>
   `;
 }
 
+function renderEmpty() {
+  result.className = "result-card";
+  result.innerHTML = "<h2>Type a journal name to begin.</h2>";
+}
+
 function search() {
-  const query = input.value.trim();
-  if (!query) {
-    result.className = "result-card not-found";
-    result.innerHTML = "<h2>Please enter a journal title.</h2>";
+  const query = input.value || "";
+  if (!query.trim()) {
+    renderEmpty();
     return;
   }
 
-  const normalizedQuery = compact(query);
-  const match = journals.find((item) => compact(item.title) === normalizedQuery);
+  const key = normalize(query);
+  const match = journalIndex.get(key);
 
-  if (match) {
-    renderFound(match);
-  } else {
-    renderNotFound(query);
-  }
+  if (match) renderFound(match);
+  else renderNotFound(query.trim());
 }
 
-async function loadData() {
-  try {
-    const response = await fetch("/data/abdc.json");
-    if (!response.ok) throw new Error("Failed to fetch data");
-    journals = await response.json();
-    loadedNote.textContent = `Loaded ${journals.length} journals`;
-  } catch (_error) {
-    loadedNote.textContent = "Loaded 0 journals";
-    result.className = "result-card error";
-    result.innerHTML = "<h2>Failed to load ABDC data.</h2><p>Run data generation and try again.</p>";
-  }
+async function loadJournals() {
+  const response = await fetch(DATA_PATH);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+  journals = await response.json();
+  journalIndex = buildLookupIndex(journals);
+
+  if (source) source.textContent = `Runtime data source: ${DATA_PATH} (served from ${RUNTIME_SOURCE})`;
+  if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
+
+  if (status) status.textContent = `Loaded ${journals.length} journals`;
+  renderEmpty();
 }
 
-button.addEventListener("click", search);
+input.addEventListener("input", search);
 input.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") search();
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
 });
 
-loadData();
+loadJournals().catch(() => {
+  if (source) source.textContent = `Runtime data source: ${DATA_PATH}`;
+  if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
+
+  if (status) status.textContent = "Could not load journal data";
+  result.className = "result-card not-found";
+  result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
+});

@@ -38,7 +38,9 @@ def normalize_year(value: str) -> str:
 
 
 def col_ref(cell_ref: str) -> str:
-    return re.match(r"[A-Z]+", cell_ref).group(0)
+    # Safer: avoid crash if cell reference is missing/invalid
+    m = re.match(r"[A-Z]+", cell_ref or "")
+    return m.group(0) if m else ""
 
 
 def read_shared_strings(zf: zipfile.ZipFile) -> list[str]:
@@ -144,24 +146,34 @@ def parse_from_xlsx() -> list[dict[str, str]]:
                 "year": normalize_year(clean(row.get(year_col, ""))) if year_col else "",
             }
         )
+
+    output.sort(key=lambda x: x["title"].lower())
     return output
 
 
 def parse_from_legacy_json() -> list[dict[str, str]]:
     data = json.loads(LEGACY_JSON_PATH.read_text(encoding="utf-8"))
-    return [
-        {
-            "title": clean(item.get("name", "")),
-            "rating": clean(item.get("rank", "")),
-            "issn": "",
-            "issn_online": "",
-            "publisher": "",
-            "for_code": "",
-            "year": "",
-        }
-        for item in data
-        if clean(item.get("name", ""))
-    ]
+    out: list[dict[str, str]] = []
+
+    for item in data:
+        title = clean(item.get("name", ""))
+        rating = clean(item.get("rating", "")) or clean(item.get("rank", ""))
+        if not title:
+            continue
+        out.append(
+            {
+                "title": title,
+                "rating": rating,
+                "issn": "",
+                "issn_online": "",
+                "publisher": "",
+                "for_code": "",
+                "year": "",
+            }
+        )
+
+    out.sort(key=lambda x: x["title"].lower())
+    return out
 
 
 def main() -> int:
@@ -177,6 +189,9 @@ def main() -> int:
     else:
         print("error: neither data/abdc.xlsx nor data/abdc.json exists", file=sys.stderr)
         return 1
+
+    # Optional but nice: ensure stable ordering even if upstream changes
+    records.sort(key=lambda x: x.get("title", "").lower())
 
     OUTPUT_PATH.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"generated {OUTPUT_PATH} with {len(records)} journals from {source}")
