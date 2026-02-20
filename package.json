@@ -1,18 +1,9 @@
-{
-  "name": "abdc-checker",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "generate:data": "python scripts/generate_abdc_json.py",
-    "predev": "npm run generate:data",
-    "dev": "vite",
-    "prebuild": "npm run generate:data",
-    "build": "vite build --base=/abdc-checker/"
-    "preview": "vite preview",
-    "check": "python scripts/generate_abdc_json.py && python -m json.tool public/data/abdc.json >nul 2>nul || python -m json.tool public/data/abdc.json >/dev/null && node --check src/main.js"
-  },
-  "devDependencies": {
-    "vite": "^5.4.10"
-  }
+"scripts": {
+  "generate:data": "python scripts/generate_abdc_json.py",
+  "predev": "npm run generate:data",
+  "dev": "vite",
+  "prebuild": "npm run generate:data",
+  "build": "vite build --base=/abdc-checker/",
+  "preview": "vite preview",
+  "check": "python scripts/generate_abdc_json.py && python -m json.tool public/data/abdc.json >nul 2>nul || python -m json.tool public/data/abdc.json >/dev/null && node --check src/main.js"
 }
