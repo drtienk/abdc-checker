@@ -1,4 +1,4 @@
-// public/app.js
+// src/main.js
 
 const DATA_PATH = "/data/abdc.json"; // public/data/abdc.json 會以 /data/abdc.json 提供
 const RUNTIME_SOURCE = "public/data/abdc.json";
@@ -11,8 +11,22 @@ const status = document.getElementById("loaded-count");
 const source = document.getElementById("data-source");
 const fields = document.getElementById("field-info");
 
+// Scholar Search (optional UI)
+const scholarKeywordInput = document.getElementById("scholarKeyword");
+const scholarJournalInput = document.getElementById("scholarJournal");
+const scholarSearchBtn = document.getElementById("scholarSearchBtn");
+const scholarStatus = document.getElementById("scholarStatus");
+const journalList = document.getElementById("journalList");
+
+const HAS_SCHOLAR_UI =
+  !!scholarKeywordInput && !!scholarJournalInput && !!scholarSearchBtn && !!scholarStatus && !!journalList;
+
+const SCHOLAR_KEYWORD_STORAGE = "scholarKeyword";
+const SCHOLAR_JOURNAL_STORAGE = "scholarJournal";
+
 let journals = [];
 let journalIndex = new Map();
+let scholarTab = null;
 
 function normalize(text) {
   // 大小寫不敏感、忽略標點/空白、& 視為 and、忽略開頭 the
@@ -27,7 +41,7 @@ function normalize(text) {
 }
 
 function getTitle(item) {
-  return String(item?.title || item?.name || "").trim();
+  return String(item?.name || item?.title || "").trim();
 }
 
 function getRating(item) {
@@ -71,15 +85,11 @@ function findSuggestions(query, count = 5) {
       const normalizedTitle = normalize(title);
       const distance = levenshtein(normalizedQuery, normalizedTitle);
       const startsWithBonus = normalizedTitle.startsWith(normalizedQuery) ? -2 : 0;
-
-      return {
-        ...item,
-        _title: title,
-        _score: distance + startsWithBonus,
-      };
+      return { item, score: distance + startsWithBonus, title };
     })
-    .sort((a, b) => a._score - b._score)
-    .slice(0, count);
+    .sort((a, b) => a.score - b.score)
+    .slice(0, count)
+    .map((x) => x.item);
 }
 
 function renderFound(journal) {
@@ -125,6 +135,96 @@ function search() {
   else renderNotFound(query.trim());
 }
 
+/* =========================
+   Scholar Search (optional)
+   ========================= */
+
+function setScholarReadyState(ready) {
+  if (!HAS_SCHOLAR_UI) return;
+  scholarKeywordInput.disabled = !ready;
+  scholarJournalInput.disabled = !ready;
+  scholarSearchBtn.disabled = !ready;
+}
+
+function setScholarStatus(message) {
+  if (!HAS_SCHOLAR_UI) return;
+  scholarStatus.textContent = message;
+}
+
+function restoreScholarInputs() {
+  if (!HAS_SCHOLAR_UI) return;
+  scholarKeywordInput.value = localStorage.getItem(SCHOLAR_KEYWORD_STORAGE) || "";
+  scholarJournalInput.value = localStorage.getItem(SCHOLAR_JOURNAL_STORAGE) || "";
+}
+
+function persistScholarInputs() {
+  if (!HAS_SCHOLAR_UI) return;
+  localStorage.setItem(SCHOLAR_KEYWORD_STORAGE, scholarKeywordInput.value);
+  localStorage.setItem(SCHOLAR_JOURNAL_STORAGE, scholarJournalInput.value);
+}
+
+function populateScholarJournals(items) {
+  if (!HAS_SCHOLAR_UI) return;
+  const options = [...new Set(items.map((item) => getTitle(item)).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+
+  journalList.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  for (const title of options) {
+    const option = document.createElement("option");
+    option.value = title;
+    fragment.appendChild(option);
+  }
+  journalList.appendChild(fragment);
+}
+
+function openOrReuseTab(url, name = "scholarResults") {
+  // 用 window.open(url, name) 就能確保同名視窗會被重用
+  const w = window.open(url, name);
+  if (!w) {
+    setScholarStatus("Popup blocked. Please allow popups and try again.");
+    return false;
+  }
+  scholarTab = w;
+  try {
+    w.focus();
+  } catch {
+    // ignore
+  }
+  return true;
+}
+
+function runScholarSearch() {
+  if (!HAS_SCHOLAR_UI) return;
+
+  if (!journals.length) {
+    setScholarStatus("Loading journals...");
+    return;
+  }
+
+  const keyword = scholarKeywordInput.value.trim();
+  const journal = scholarJournalInput.value.trim();
+
+  if (!keyword) {
+    setScholarStatus("Keyword required");
+    return;
+  }
+  if (!journal) {
+    setScholarStatus("Select a journal");
+    return;
+  }
+
+  persistScholarInputs();
+
+  const q = `allintitle:"${keyword}" "${journal}"`;
+  const url = `https://scholar.google.com/scholar?q=${encodeURIComponent(q)}`;
+
+  if (openOrReuseTab(url, "scholarResults")) {
+    setScholarStatus("Opened Google Scholar in reusable tab.");
+  }
+}
+
+/* ========================= */
+
 async function loadJournals() {
   const response = await fetch(DATA_PATH);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -134,8 +234,19 @@ async function loadJournals() {
 
   if (source) source.textContent = `Runtime data source: ${DATA_PATH} (served from ${RUNTIME_SOURCE})`;
   if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
-
   if (status) status.textContent = `Loaded ${journals.length} journals`;
+
+  if (HAS_SCHOLAR_UI) {
+    populateScholarJournals(journals);
+    setScholarReadyState(true);
+    setScholarStatus(`Ready. Journals loaded: ${journals.length}`);
+    restoreScholarInputs();
+
+    scholarKeywordInput.addEventListener("input", persistScholarInputs);
+    scholarJournalInput.addEventListener("input", persistScholarInputs);
+    scholarSearchBtn.addEventListener("click", runScholarSearch);
+  }
+
   renderEmpty();
 }
 
@@ -147,11 +258,21 @@ input.addEventListener("keydown", (event) => {
   }
 });
 
+if (HAS_SCHOLAR_UI) {
+  setScholarReadyState(false);
+  setScholarStatus("Loading journals...");
+}
+
 loadJournals().catch(() => {
   if (source) source.textContent = `Runtime data source: ${DATA_PATH}`;
   if (fields) fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
-
   if (status) status.textContent = "Could not load journal data";
+
+  if (HAS_SCHOLAR_UI) {
+    setScholarReadyState(false);
+    setScholarStatus("Could not load journals for Scholar Search");
+  }
+
   result.className = "result-card not-found";
   result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
 });

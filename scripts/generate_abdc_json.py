@@ -38,7 +38,6 @@ def normalize_year(value: str) -> str:
 
 
 def col_ref(cell_ref: str) -> str:
-    # Safer: avoid crash if cell reference is missing/invalid
     m = re.match(r"[A-Z]+", cell_ref or "")
     return m.group(0) if m else ""
 
@@ -190,7 +189,6 @@ def main() -> int:
         print("error: neither data/abdc.xlsx nor data/abdc.json exists", file=sys.stderr)
         return 1
 
-    # Optional but nice: ensure stable ordering even if upstream changes
     records.sort(key=lambda x: x.get("title", "").lower())
 
     OUTPUT_PATH.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

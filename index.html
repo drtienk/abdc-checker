@@ -22,6 +22,28 @@
       </section>
 
       <section id="result" class="result-card" aria-live="polite"></section>
+
+      <!-- Scholar Search (independent feature) -->
+      <section class="scholar-panel" aria-labelledby="scholar-heading">
+        <h2 id="scholar-heading">Scholar Search <span class="scholar-version">v0.1</span></h2>
+
+        <label for="scholarKeyword">Keyword in title</label>
+        <input
+          id="scholarKeyword"
+          type="text"
+          placeholder="Keyword in title (e.g., customer)"
+          autocomplete="off"
+          disabled
+        />
+
+        <label for="scholarJournal">Journal</label>
+        <input list="journalList" id="scholarJournal" placeholder="Select a journal" autocomplete="off" disabled />
+        <datalist id="journalList"></datalist>
+
+        <button id="scholarSearchBtn" type="button" disabled>Search on Google Scholar</button>
+        <p id="scholarStatus" class="scholar-status">Loading journals...</p>
+        <p class="scholar-hint">Opens in one reusable tab.</p>
+      </section>
     </main>
 
     <script type="module" src="/src/main.js"></script>
