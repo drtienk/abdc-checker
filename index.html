@@ -11,17 +11,15 @@
       <header>
         <h1>ABDC Journal Checker</h1>
         <p>Search a journal name to check whether it appears in the ABDC journal list.</p>
+        <p id="loaded-count" class="loaded-count">Loading journals...</p>
       </header>
 
       <section class="search-panel">
         <label for="journal-input">Journal name</label>
-        <div class="search-row">
-          <input id="journal-input" type="text" placeholder="e.g., Journal of Marketing" autocomplete="off" />
-          <button id="search-btn" type="button">Check</button>
-        </div>
+        <input id="journal-input" type="text" placeholder="e.g., Journal of Marketing" autocomplete="off" />
       </section>
 
-      <section id="result" class="result-card hidden" aria-live="polite"></section>
+      <section id="result" class="result-card" aria-live="polite"></section>
     </main>
 
     <script type="module" src="/src/main.js"></script>
