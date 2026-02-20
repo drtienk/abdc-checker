@@ -64,6 +64,14 @@ npm run build
 npm run preview
 ```
 
+## Checks
+
+Run a quick local check:
+
+```bash
+npm run check
+```
+
 ## Matching behavior
 
 Search matching is:

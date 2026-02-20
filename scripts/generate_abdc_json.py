@@ -26,7 +26,15 @@ NS = {
 
 
 def clean(value: str | None) -> str:
-    return "" if value is None else re.sub(r"\s+", " ", str(value)).strip()
+    value = "" if value is None else str(value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
+def normalize_year(value: str) -> str:
+    if re.fullmatch(r"\d+\.0", value):
+        return value.split(".", 1)[0]
+    return value
 
 
 def col_ref(cell_ref: str) -> str:
@@ -80,6 +88,10 @@ def read_cells(zf: zipfile.ZipFile, sheet_path: str, shared: list[str]) -> list[
                     txt = shared[int(raw)]
                 else:
                     txt = raw
+                if not txt:
+                    formula_node = cell.find("main:f", NS)
+                    if formula_node is not None and formula_node.text:
+                        txt = formula_node.text
             row_data[key] = clean(txt)
         rows.append(row_data)
     return rows
@@ -129,7 +141,7 @@ def parse_from_xlsx() -> list[dict[str, str]]:
                 "issn_online": clean(row.get(issn_online_col, "")) if issn_online_col else "",
                 "publisher": clean(row.get(publisher_col, "")) if publisher_col else "",
                 "for_code": clean(row.get(for_col, "")) if for_col else "",
-                "year": clean(row.get(year_col, "")) if year_col else "",
+                "year": normalize_year(clean(row.get(year_col, ""))) if year_col else "",
             }
         )
     return output
