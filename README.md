@@ -7,12 +7,11 @@ A simple website where you type a journal name and check whether it is in the AB
 - Single search box for journal lookup.
 - Loads runtime data from exactly one source: `/data/abdc.json` (served from `public/data/abdc.json`).
 - Case-insensitive and punctuation-insensitive matching.
-- Normalization also trims text, collapses repeated spaces, removes invisible characters, and treats `&` and `and` as equivalent.
+- Normalization trims text, collapses repeated spaces, removes punctuation, is case-insensitive, and treats `&` and `and` as equivalent.
 - Clear `FOUND` / `NOT FOUND` status.
 - Shows rating for matched journals.
 - Shows best suggestions when not found.
 - Displays both runtime data path and `Loaded N journals` after data is loaded.
-- Optional debug mode for misses via `?debug=1`.
 
 ## Project structure
 
@@ -22,6 +21,18 @@ A simple website where you type a journal name and check whether it is in the AB
 - `data/abdc.xlsx` — source ABDC dataset.
 - `public/data/abdc.json` — generated journal data used by the app.
 - `scripts/generate_abdc_json.py` — generator script.
+
+## Expected runtime JSON schema
+
+`public/data/abdc.json` should be an array like:
+
+```json
+[
+  { "name": "Abacus", "rating": "A" }
+]
+```
+
+The app resolves title using `name` then `title`, and rating using `rating` then `rank`.
 
 ## Run locally
 

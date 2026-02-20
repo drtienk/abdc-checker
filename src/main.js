@@ -1,18 +1,17 @@
 const DATA_PATH = "/data/abdc.json";
 const RUNTIME_SOURCE = "public/data/abdc.json";
-const DEBUG_MODE = new URLSearchParams(window.location.search).get("debug") === "1";
 
 const input = document.getElementById("journal-input");
 const result = document.getElementById("result");
 const status = document.getElementById("loaded-count");
 const source = document.getElementById("data-source");
+const fields = document.getElementById("field-info");
 
 let journals = [];
 let journalIndex = new Map();
 
 function normalize(text) {
   return (text || "")
-    .replace(/[\u200B-\u200D\uFEFF\u00A0]/g, " ")
     .toLowerCase()
     .trim()
     .replace(/&/g, " and ")
@@ -24,7 +23,11 @@ function normalize(text) {
 }
 
 function getTitle(item) {
-  return (item.title || item.name || "").trim();
+  return (item.name || item.title || "").trim();
+}
+
+function getRating(item) {
+  return (item.rating || item.rank || "N/A").trim();
 }
 
 function levenshtein(a, b) {
@@ -54,7 +57,6 @@ function findSuggestions(query, count = 5) {
       return {
         ...item,
         title,
-        normalizedTitle,
         score: distance + startsWithBonus
       };
     })
@@ -67,29 +69,15 @@ function renderFound(journal) {
   result.innerHTML = `
     <h2>FOUND</h2>
     <p><strong>${getTitle(journal)}</strong></p>
-    <p>Rating: <strong>${journal.rating || "N/A"}</strong></p>
+    <p>Rating: <strong>${getRating(journal)}</strong></p>
   `;
 }
 
 function renderNotFound(query) {
-  const normalizedQuery = normalize(query);
   const suggestions = findSuggestions(query);
   const suggestionItems = suggestions
-    .map((item) => `<li>${item.title} <span class="rank">(${item.rating || "N/A"})</span></li>`)
+    .map((item) => `<li>${item.title} <span class="rank">(${getRating(item)})</span></li>`)
     .join("");
-
-  let debugBlock = "";
-  if (DEBUG_MODE) {
-    const closestNormalized = suggestions.map((item) => item.normalizedTitle).join(", ");
-    console.debug("[ABDC DEBUG] not found", { normalizedQuery, closestNormalized, suggestions });
-    debugBlock = `
-      <details class="debug-block" open>
-        <summary>Debug details</summary>
-        <p><strong>Normalized query:</strong> <code>${normalizedQuery}</code></p>
-        <p><strong>Closest normalized candidates:</strong> <code>${closestNormalized || "(none)"}</code></p>
-      </details>
-    `;
-  }
 
   result.className = "result-card not-found";
   result.innerHTML = `
@@ -97,7 +85,6 @@ function renderNotFound(query) {
     <p><strong>${query}</strong> is not an exact match.</p>
     <p class="suggestion-title">Suggestions:</p>
     <ul>${suggestionItems}</ul>
-    ${debugBlock}
   `;
 }
 
@@ -141,6 +128,7 @@ async function loadJournals() {
   journalIndex = buildLookupIndex(journals);
 
   source.textContent = `Runtime data source: ${DATA_PATH} (served from ${RUNTIME_SOURCE})`;
+  fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
   status.textContent = `Loaded ${journals.length} journals`;
   renderEmpty();
 }
@@ -155,6 +143,7 @@ input.addEventListener("keydown", (event) => {
 
 loadJournals().catch(() => {
   source.textContent = `Runtime data source: ${DATA_PATH}`;
+  fields.textContent = "Lookup fields: title=name→title, rating=rating→rank";
   status.textContent = "Could not load journal data";
   result.className = "result-card not-found";
   result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
