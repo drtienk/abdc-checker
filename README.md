@@ -4,17 +4,35 @@ A simple website where you type a journal name and check whether it is in the AB
 
 ## Features
 
-- Search by journal name with case/punctuation-insensitive matching.
-- Clear result card for **found** or **not found**.
-- If not found, the app suggests similar journal names.
-- Journal data is stored in `/data/abdc.json`.
+- Single search box for journal lookup.
+- Loads runtime data from exactly one source: `/data/abdc.json` (served from `public/data/abdc.json`).
+- Case-insensitive and punctuation-insensitive matching.
+- Normalization trims text, collapses repeated spaces, removes punctuation, is case-insensitive, and treats `&` and `and` as equivalent.
+- Clear `FOUND` / `NOT FOUND` status.
+- Shows rating for matched journals.
+- Shows best suggestions when not found.
+- Displays both runtime data path and `Loaded N journals` after data is loaded.
 
 ## Project structure
 
 - `index.html` — single-page UI shell.
-- `src/main.js` — search logic and result rendering.
-- `src/styles.css` — simple clean styling.
-- `data/abdc.json` — ABDC journal dataset.
+- `src/main.js` — data loading, normalization, index lookup, and result rendering.
+- `src/styles.css` — styling.
+- `data/abdc.xlsx` — source ABDC dataset.
+- `public/data/abdc.json` — generated journal data used by the app.
+- `scripts/generate_abdc_json.py` — generator script.
+
+## Expected runtime JSON schema
+
+`public/data/abdc.json` should be an array like:
+
+```json
+[
+  { "name": "Abacus", "rating": "A" }
+]
+```
+
+The app resolves title using `name` then `title`, and rating using `rating` then `rank`.
 
 ## Run locally
 
@@ -24,45 +42,41 @@ A simple website where you type a journal name and check whether it is in the AB
 npm install
 ```
 
-2. Start dev server:
+2. Generate data from the spreadsheet:
+
+```bash
+python scripts/generate_abdc_json.py
+```
+
+3. Start dev server:
 
 ```bash
 npm run dev
 ```
 
-3. Build for production:
+4. Build for production:
 
 ```bash
 npm run build
 ```
 
-4. Preview production build:
+## Regenerating journal data
+
+Whenever `data/abdc.xlsx` changes, run:
 
 ```bash
-npm run preview
+python scripts/generate_abdc_json.py
 ```
 
-## Deploy
+## Regression test
 
-This is a static Vite site.
+Use this input and verify it returns `FOUND` with the official title and rating:
 
-### Vercel
+- `Advances in Accounting Behavioral Research`
 
-- Framework preset: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
+## Developer note: Scholar Search
 
-### Netlify
-
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-## Updating the journal list
-
-Edit `data/abdc.json` using this shape:
-
-```json
-[
-  { "name": "Journal Name", "rank": "A*" }
-]
-```
+- The **Scholar Search** block is independent from the ABDC checker UI and reuses the already-loaded ABDC journal list to populate the journal picker.
+- It builds Google Scholar queries in this format: `allintitle:"<keyword>" "<journal>"`.
+- Searches open in one reusable browser tab/window name (`scholarResults`) so each new search replaces the previous Scholar results.
+- If popups are blocked by the browser, the feature shows a status warning and requires allowing popups for the page.
