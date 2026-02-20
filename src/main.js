@@ -1,11 +1,11 @@
-import journals from "../data/abdc.json";
-
 const input = document.getElementById("journal-input");
-const button = document.getElementById("search-btn");
 const result = document.getElementById("result");
+const status = document.getElementById("loaded-count");
+
+let journals = [];
 
 function normalize(text) {
-  return text.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return (text || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 function levenshtein(a, b) {
@@ -22,10 +22,10 @@ function levenshtein(a, b) {
   return matrix[a.length][b.length];
 }
 
-function findSuggestions(query, list, count = 5) {
+function findSuggestions(query, count = 5) {
   const normalizedQuery = normalize(query);
 
-  return list
+  return journals
     .map((item) => {
       const normalizedName = normalize(item.name);
       const distance = levenshtein(normalizedQuery, normalizedName);
@@ -43,30 +43,30 @@ function findSuggestions(query, list, count = 5) {
 function renderFound(journal) {
   result.className = "result-card found";
   result.innerHTML = `
-    <h2>Found in ABDC list</h2>
+    <h2>FOUND</h2>
     <p><strong>${journal.name}</strong></p>
-    <p>ABDC rank: <strong>${journal.rank}</strong></p>
+    <p>Rating: <strong>${journal.rating}</strong></p>
   `;
 }
 
 function renderNotFound(query) {
-  const suggestions = findSuggestions(query, journals);
+  const suggestions = findSuggestions(query);
   const suggestionItems = suggestions
-    .map((item) => `<li>${item.name} <span class="rank">(${item.rank})</span></li>`)
+    .map((item) => `<li>${item.name} <span class="rank">(${item.rating})</span></li>`)
     .join("");
 
   result.className = "result-card not-found";
   result.innerHTML = `
-    <h2>Not found in ABDC list</h2>
+    <h2>NOT FOUND</h2>
     <p><strong>${query}</strong> is not an exact match.</p>
-    <p class="suggestion-title">Similar journals:</p>
+    <p class="suggestion-title">Suggestions:</p>
     <ul>${suggestionItems}</ul>
   `;
 }
 
 function renderEmpty() {
-  result.className = "result-card not-found";
-  result.innerHTML = "<h2>Please enter a journal name.</h2>";
+  result.className = "result-card";
+  result.innerHTML = "<h2>Type a journal name to begin.</h2>";
 }
 
 function search() {
@@ -88,7 +88,23 @@ function search() {
   renderNotFound(query);
 }
 
-button.addEventListener("click", search);
+async function loadJournals() {
+  const response = await fetch("/data/abdc.json");
+  journals = await response.json();
+  status.textContent = `Loaded ${journals.length} journals`;
+  renderEmpty();
+}
+
+input.addEventListener("input", search);
 input.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") search();
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
+});
+
+loadJournals().catch(() => {
+  status.textContent = "Could not load journal data";
+  result.className = "result-card not-found";
+  result.innerHTML = "<h2>NOT FOUND</h2><p>Data failed to load.</p>";
 });

@@ -4,17 +4,21 @@ A simple website where you type a journal name and check whether it is in the AB
 
 ## Features
 
-- Search by journal name with case/punctuation-insensitive matching.
-- Clear result card for **found** or **not found**.
-- If not found, the app suggests similar journal names.
-- Journal data is stored in `/data/abdc.json`.
+- Single search box for journal lookup.
+- Case-insensitive and punctuation-insensitive matching.
+- Clear `FOUND` / `NOT FOUND` status.
+- Shows rating for matched journals.
+- Shows best suggestions when not found.
+- Displays `Loaded N journals` after data is loaded.
 
 ## Project structure
 
 - `index.html` — single-page UI shell.
-- `src/main.js` — search logic and result rendering.
-- `src/styles.css` — simple clean styling.
-- `data/abdc.json` — ABDC journal dataset.
+- `src/main.js` — data loading, search logic, and result rendering.
+- `src/styles.css` — styling.
+- `data/abdc.xlsx` — source ABDC dataset.
+- `public/data/abdc.json` — generated journal data used by the app.
+- `scripts/generate_abdc_json.py` — generator script.
 
 ## Run locally
 
@@ -24,45 +28,28 @@ A simple website where you type a journal name and check whether it is in the AB
 npm install
 ```
 
-2. Start dev server:
+2. Generate data from the spreadsheet:
+
+```bash
+python scripts/generate_abdc_json.py
+```
+
+3. Start dev server:
 
 ```bash
 npm run dev
 ```
 
-3. Build for production:
+4. Build for production:
 
 ```bash
 npm run build
 ```
 
-4. Preview production build:
+## Regenerating journal data
+
+Whenever `data/abdc.xlsx` changes, run:
 
 ```bash
-npm run preview
-```
-
-## Deploy
-
-This is a static Vite site.
-
-### Vercel
-
-- Framework preset: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
-
-### Netlify
-
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-## Updating the journal list
-
-Edit `data/abdc.json` using this shape:
-
-```json
-[
-  { "name": "Journal Name", "rank": "A*" }
-]
+python scripts/generate_abdc_json.py
 ```
