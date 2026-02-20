@@ -35,6 +35,10 @@ header p {
   color: #475569;
 }
 
+.data-source {
+  font-size: 0.92rem;
+}
+
 .loaded-count {
   font-weight: 600;
   color: #0f172a;
@@ -93,4 +97,14 @@ input {
 .rank {
   color: #334155;
   font-size: 0.95rem;
+}
+
+.debug-block {
+  margin-top: 0.75rem;
+}
+
+code {
+  background: rgba(15, 23, 42, 0.06);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
 }
