@@ -35,6 +35,15 @@ header p {
   color: #475569;
 }
 
+.data-source {
+  font-size: 0.92rem;
+}
+
+.loaded-count {
+  font-weight: 600;
+  color: #0f172a;
+}
+
 .search-panel {
   margin-top: 1.5rem;
 }
@@ -45,31 +54,12 @@ label {
   margin-bottom: 0.5rem;
 }
 
-.search-row {
-  display: flex;
-  gap: 0.75rem;
-}
-
 input {
-  flex: 1;
+  width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 0.75rem 0.95rem;
   font-size: 1rem;
-}
-
-button {
-  border: none;
-  background: #2563eb;
-  color: #ffffff;
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #1d4ed8;
 }
 
 .result-card {
@@ -77,6 +67,7 @@ button:hover {
   border-radius: 12px;
   padding: 1rem 1.25rem;
   border: 1px solid #cbd5e1;
+  background: #f8fafc;
 }
 
 .result-card h2 {
@@ -106,4 +97,53 @@ button:hover {
 .rank {
   color: #334155;
   font-size: 0.95rem;
+}
+
+.debug-block {
+  margin-top: 0.75rem;
+}
+
+code {
+  background: rgba(15, 23, 42, 0.06);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+}
+
+
+.scholar-panel {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.scholar-panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.scholar-panel label {
+  margin-top: 0.75rem;
+}
+
+.scholar-panel button {
+  margin-top: 1rem;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.scholar-panel button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.scholar-status,
+.scholar-hint {
+  margin: 0.5rem 0 0;
+  color: #475569;
+  font-size: 0.92rem;
 }

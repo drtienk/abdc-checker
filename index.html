@@ -11,17 +11,37 @@
       <header>
         <h1>ABDC Journal Checker</h1>
         <p>Search a journal name to check whether it appears in the ABDC journal list.</p>
+        <p id="data-source" class="data-source">Runtime data source: /data/abdc.json</p>
+        <p id="field-info" class="data-source">Lookup fields: title=name→title, rating=rating→rank</p>
+        <p id="loaded-count" class="loaded-count">Loading journals...</p>
       </header>
 
       <section class="search-panel">
         <label for="journal-input">Journal name</label>
-        <div class="search-row">
-          <input id="journal-input" type="text" placeholder="e.g., Journal of Marketing" autocomplete="off" />
-          <button id="search-btn" type="button">Check</button>
-        </div>
+        <input id="journal-input" type="text" placeholder="e.g., Journal of Marketing" autocomplete="off" />
       </section>
 
-      <section id="result" class="result-card hidden" aria-live="polite"></section>
+      <section id="result" class="result-card" aria-live="polite"></section>
+
+      <section class="scholar-panel" aria-labelledby="scholar-heading">
+        <h2 id="scholar-heading">Scholar Search</h2>
+        <label for="scholarKeyword">Keyword in title</label>
+        <input
+          id="scholarKeyword"
+          type="text"
+          placeholder="Keyword in title (e.g., customer)"
+          autocomplete="off"
+          disabled
+        />
+
+        <label for="scholarJournal">Journal</label>
+        <input list="journalList" id="scholarJournal" placeholder="Select a journal" autocomplete="off" disabled />
+        <datalist id="journalList"></datalist>
+
+        <button id="scholarSearchBtn" type="button" disabled>Search on Google Scholar</button>
+        <p id="scholarStatus" class="scholar-status">Loading journals...</p>
+        <p class="scholar-hint">Opens in one reusable tab.</p>
+      </section>
     </main>
 
     <script type="module" src="/src/main.js"></script>
