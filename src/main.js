@@ -223,6 +223,12 @@ function runScholarSearch() {
   }
 }
 
+function handleScholarEnter(event) {
+  if (event.key !== "Enter") return;
+  event.preventDefault();
+  runScholarSearch();
+}
+
 /* ========================= */
 
 async function loadJournals() {
@@ -245,6 +251,8 @@ async function loadJournals() {
     scholarKeywordInput.addEventListener("input", persistScholarInputs);
     scholarJournalInput.addEventListener("input", persistScholarInputs);
     scholarSearchBtn.addEventListener("click", runScholarSearch);
+    scholarKeywordInput.addEventListener("keydown", handleScholarEnter);
+    scholarJournalInput.addEventListener("keydown", handleScholarEnter);
   }
 
   renderEmpty();
